@@ -1,0 +1,14 @@
+:root {
+  --v-elevation-stroke: 0 0 0 var(--v-unit-025) var(--v-color-elevation-stroke);
+
+  --v-elevation-low: 0 var(--v-unit-05) var(--v-unit-1) var(--v-color-elevation-low);
+  --v-elevation: 0 var(--v-unit-1) var(--v-unit-2) var(--v-color-elevation);
+  --v-elevation-high: 0 var(--v-unit-2) var(--v-unit-4) var(--v-color-elevation-high);
+
+  --v-elevation-invert-low: 0 calc(var(--v-unit-05) * -1) var(--v-unit-1)
+    var(--v-color-elevation-low);
+  --v-elevation-invert-default: 0 calc(var(--v-unit-1) * -1) var(--v-unit-2)
+    var(--v-color-elevation);
+  --v-elevation-invert-high: 0 calc(var(--v-unit-2) * -1) var(--v-unit-4)
+    var(--v-color-elevation-high);
+}

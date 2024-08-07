@@ -1,0 +1,39 @@
+:root {
+  --v-font-size-b4-value: 12;
+  --v-font-size-b3-value: 14;
+  --v-font-size-b2-value: 16;
+  --v-font-size-b1-value: 18;
+  --v-font-size-h6-value: 20;
+  --v-font-size-h5-value: 22;
+  --v-font-size-h4-value: 24;
+  --v-font-size-h3-value: 26;
+  --v-font-size-h2-value: 30;
+  --v-font-size-h1-value: 32;
+
+  --v-font-size-b4: calc(var(--v-font-size-b4-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-b3: calc(var(--v-font-size-b3-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-b2: calc(var(--v-font-size-b2-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-b1: calc(var(--v-font-size-b1-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h6: calc(var(--v-font-size-h6-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h5: calc(var(--v-font-size-h5-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h4: calc(var(--v-font-size-h4-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h3: calc(var(--v-font-size-h3-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h2: calc(var(--v-font-size-h2-value) / var(--v-base-size) * var(--v-base-unit));
+  --v-font-size-h1: calc(var(--v-font-size-h1-value) / var(--v-base-size) * var(--v-base-unit));
+
+  --v-font-weight-normal: 400;
+  --v-font-weight-medium: 500;
+  --v-font-weight-semibold: 600;
+  --v-font-weight-bold: 700;
+
+  --v-font-family: 'Poppins', sans-serif;
+  --v-font-size: var(--v-font-size-b2);
+  --v-line-height: round(nearest, calc(1em * 1.5), var(--v-unit-1));
+  --v-font-weight: var(--v-font-weight-normal);
+}
+
+@supports not (line-height: round(nearest, 0.8rem, 1rem)) {
+  :root {
+    --v-line-height: 1.5;
+  }
+}

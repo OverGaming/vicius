@@ -1,0 +1,8 @@
+:root {
+  --v-z-index-pawn: 100;
+  --v-z-index-knight: 200;
+  --v-z-index-bishop: 300;
+  --v-z-index-rook: 400;
+  --v-z-index-queen: 500;
+  --v-z-index-king: 600;
+}

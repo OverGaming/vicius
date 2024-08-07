@@ -1,0 +1,12 @@
+:root {
+  --v-container-xt: rem(480px);
+  --v-container-tn: rem(640px);
+  --v-container-xs: rem(800px);
+  --v-container-sm: rem(1024px);
+  --v-container-df: rem(1280px);
+  --v-container-md: rem(1360px);
+  --v-container-lg: rem(1460px);
+  --v-container-xl: rem(1560px);
+  --v-container-hg: rem(1640px);
+  --v-container-hd: rem(1920px);
+}

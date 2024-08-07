@@ -1,0 +1,8 @@
+:root {
+  --v-duration-fast: 150ms;
+  --v-duration-default: 250ms;
+  --v-duration-slow: 300ms;
+  --v-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --v-easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+  --v-easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+}

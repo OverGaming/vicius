@@ -1,0 +1,8 @@
+dist/*
+public/*
+*.html
+*.ts
+*.js
+*.stories.ts
+*.stories.js
+*.cjs

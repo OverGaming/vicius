@@ -1,0 +1,4 @@
+* {
+  scrollbar-color: var(--v-color-surface-mod-high) var(--v-color-surface-mod-alt);
+  scrollbar-width: thin;
+}

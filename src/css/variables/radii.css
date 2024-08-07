@@ -1,0 +1,8 @@
+:root {
+  --v-radius-xs: var(--v-unit-05);
+  --v-radius-sm: var(--v-unit-1);
+  --v-radius-md: var(--v-unit-2);
+  --v-radius-lg: var(--v-unit-3);
+  --v-radius-xl: var(--v-unit-4);
+  --v-radius-pill: rem(9999px);
+}

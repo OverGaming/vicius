@@ -1,0 +1,27 @@
+.v-clamp {
+  --v-clamp-slope: calc(
+    (var(--v-clamp-max-size) - var(--v-clamp-min-size)) /
+      (var(--v-clamp-size-end) - var(--v-clamp-size-start))
+  );
+  --v-clamp-slope-cqi: calc(var(--v-clamp-slope) * 100cqi);
+  --v-clamp-inter-unit: calc(
+    (
+        (var(--v-clamp-min-size) - var(--v-clamp-slope) * var(--v-clamp-size-start)) /
+          var(--v-base-size)
+      ) * var(--v-base-unit)
+  );
+
+  --v-clamp-value: clamp(
+    calc((var(--v-clamp-min-size) / var(--v-base-size)) * var(--v-base-unit)),
+    var(--v-clamp-slope-cqi) + var(--v-clamp-inter-unit),
+    calc((var(--v-clamp-max-size) / var(--v-base-size)) * var(--v-base-unit))
+  );
+
+  @supports (line-height: round(nearest, 0.8rem, 1rem)) {
+    --v-clamp-value: clamp(
+      calc((var(--v-clamp-min-size) / var(--v-base-size)) * var(--v-base-unit)),
+      round(nearest, calc(var(--v-clamp-slope-cqi) + var(--v-clamp-inter-unit)), var(--v-unit-1)),
+      calc((var(--v-clamp-max-size) / var(--v-base-size)) * var(--v-base-unit))
+    );
+  }
+}
