@@ -12,7 +12,8 @@
     ".": {
       "import": "./dist/vicius.js",
       "require": "./dist/vicius.umd.cjs"
-    }
+    },
+    "./styles": "./dist/style.css"
   },
   "scripts": {
     "build": "vue-tsc && vite build",
