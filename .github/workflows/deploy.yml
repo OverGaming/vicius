@@ -37,6 +37,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: 'https://registry.npmjs.org/'
 
       - name: Install dependencies
         run: npm install
@@ -67,3 +68,32 @@ jobs:
 
       - name: Add CNAME file
         run: echo "vicius.overgaming.es" > ./storybook-static/CNAME
+
+      - name: Authenticate with NPM
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
+      - name: Bump version
+        run: |
+          git config --global user.email "javierpuchevictoria@gmail.com"
+          git config --global user.name "Javier Puche"
+          CURRENT_VERSION=$(node -p "require('./package.json').version")
+          NEW_VERSION=$(npm version minor --no-git-tag-version)
+          echo "New version: $NEW_VERSION"
+          echo "NEW_VERSION=$NEW_VERSION" >> $GITHUB_ENV
+          git commit -am "chore(release): $NEW_VERSION [skip ci]"
+          git tag -a "$NEW_VERSION" -m "Release $NEW_VERSION"
+
+      - name: Pull changes
+        run: git pull origin master
+
+      - name: Push changes
+        run: |
+          git push origin HEAD:master
+          git push origin --tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
