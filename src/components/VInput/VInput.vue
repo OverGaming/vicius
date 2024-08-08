@@ -1,6 +1,6 @@
 <template>
   <input
-    :id="id"
+    :id="inputId"
     v-model="value"
     class="v-input"
     :class="{
@@ -32,7 +32,7 @@
     invalid: false
   })
 
-  const { id, isField, hasMessage, messageId, updateField } = useField()
+  const { id: inputId, isField, hasMessage, messageId, updateField } = useField()
 
   watchEffect(() => {
     updateField({
