@@ -51,24 +51,6 @@ jobs:
       - name: Testing
         run: npm run test
 
-      - name: Building Storybook
-        run: npm run build-storybook
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './storybook-static'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-
-      - name: Add CNAME file
-        run: echo "vicius.overgaming.es" > ./storybook-static/CNAME
-
       - name: Authenticate with NPM
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
@@ -97,3 +79,21 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Building Storybook
+        run: npm run build-storybook
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './storybook-static'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Add CNAME file
+        run: echo "vicius.overgaming.es" > ./storybook-static/CNAME
