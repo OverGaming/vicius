@@ -26,7 +26,7 @@
   --v-font-weight-semibold: 600;
   --v-font-weight-bold: 700;
 
-  --v-font-family: 'Poppins', sans-serif;
+  --v-font-family: Poppins, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --v-font-size: var(--v-font-size-b2);
   --v-line-height: round(nearest, calc(1em * 1.5), var(--v-unit-1));
   --v-font-weight: var(--v-font-weight-normal);
