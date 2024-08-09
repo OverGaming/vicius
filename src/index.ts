@@ -1,4 +1,3 @@
-import '@/css/fonts.css'
 import '@/css/styles.css'
 
 export { default as VAlert } from './components/VAlert/VAlert.vue'
