@@ -1,13 +1,17 @@
 import type { Preview } from '@storybook/vue3'
 import { themes } from '@storybook/theming'
 
-import '@/css/fonts.css'
 import '@/css/styles.css'
 
 const preview: Preview = {
   parameters: {
     docs: {
       theme: themes.dark
+    },
+    options: {
+      storySort: {
+        order: ['Get Started', 'Typography', 'Iconography']
+      }
     },
     backgrounds: {
       default: 'default',

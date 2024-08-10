@@ -34,7 +34,7 @@
 <style scoped>
   .v-alert {
     display: grid;
-    grid-auto-flow: columns;
+    grid-auto-flow: column;
     grid-template-columns: auto 1fr;
     gap: var(--v-unit-3);
     background-color: var(--v-alert-background-color, var(--v-color-surface-mod));
