@@ -19,7 +19,7 @@
 
   withDefaults(defineProps<VAvatarProps>(), {
     alt: 'Avatar',
-    size: 'df'
+    size: 'bs'
   })
 </script>
 
@@ -56,7 +56,7 @@
     --v-avatar-font-size: var(--v-font-size-b2);
   }
 
-  .v-avatar--sz-df {
+  .v-avatar--sz-bs {
     --v-avatar-size: var(--v-unit-11);
   }
 

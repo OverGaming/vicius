@@ -44,7 +44,7 @@
     noGap: false,
     color: 'default',
     variant: 'default',
-    size: 'df'
+    size: 'bs'
   })
 
   const href = computed(() => (props.disabled || props.loading ? undefined : props.href))

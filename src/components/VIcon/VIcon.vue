@@ -22,7 +22,7 @@
   import type { VIconProps } from './types'
 
   const props = withDefaults(defineProps<VIconProps>(), {
-    size: 'df'
+    size: 'bs'
   })
 
   const id = uuid()
@@ -59,7 +59,7 @@
     --v-icon-size: var(--v-unit-5);
   }
 
-  .v-icon--df {
+  .v-icon--bs {
     --v-icon-size: var(--v-unit-6);
   }
 

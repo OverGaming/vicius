@@ -7,7 +7,7 @@ describe('VAvatar', () => {
   const src = `${window.location.href}/images/avatar.webp`
   const alt = 'Example image'
   const label = 'John Doe'
-  const sizes: VAvatarSize[] = ['xs', 'sm', 'df', 'md', 'lg', 'xl']
+  const sizes: VAvatarSize[] = ['xs', 'sm', 'bs', 'md', 'lg', 'xl']
 
   it('should render the avatar with correct src and alt', () => {
     render(VAvatar, { props: { src, alt } })

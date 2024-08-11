@@ -46,7 +46,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['xs', 'sm', 'df', 'md', 'lg', 'xl']
+      options: ['xs', 'sm', 'bs', 'md', 'lg', 'xl']
     },
     animate: {
       control: 'select',
@@ -114,7 +114,7 @@ export const Sizes = {
         <VIcon v-bind="args" name="Mail" size="xl" />
         <VIcon v-bind="args" name="Mail" size="lg" />
         <VIcon v-bind="args" name="Mail" size="md" />
-        <VIcon v-bind="args" name="Mail" size="df" />
+        <VIcon v-bind="args" name="Mail" size="bs" />
         <VIcon v-bind="args" name="Mail" size="sm" />
         <VIcon v-bind="args" name="Mail" size="xs" />
       </div>

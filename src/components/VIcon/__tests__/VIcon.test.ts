@@ -6,7 +6,7 @@ import type { VIconSize } from '../types'
 describe('VIcon', () => {
   const name = 'Bell'
   const title = 'Title text'
-  const sizes: VIconSize[] = ['xs', 'sm', 'df', 'md', 'lg', 'xl']
+  const sizes: VIconSize[] = ['xs', 'sm', 'bs', 'md', 'lg', 'xl']
 
   it('should render the icon', async () => {
     render(VIcon, { props: { name } })

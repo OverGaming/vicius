@@ -9,7 +9,7 @@ export interface VButtonProps {
   noGap?: boolean
   color?: 'default' | 'primary'
   variant?: 'default' | 'text'
-  size?: 'xs' | 'sm' | 'df'
+  size?: 'xs' | 'sm' | 'bs'
   startIcon?: VIconName
   endIcon?: VIconName
 }

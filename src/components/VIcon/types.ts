@@ -33,7 +33,7 @@ export type VIconName =
   | 'Twitch'
   | 'Warning'
 
-export type VIconSize = 'xs' | 'sm' | 'df' | 'md' | 'lg' | 'xl'
+export type VIconSize = 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl'
 
 export interface VIconProps {
   name: VIconName

@@ -7,7 +7,7 @@ const meta = {
   argTypes: {
     size: {
       control: 'select',
-      options: ['xt', 'tn', 'xs', 'sm', 'df', 'md', 'lg', 'xl', 'hg', 'hd']
+      options: ['xt', 'tn', 'xs', 'sm', 'bs', 'md', 'lg', 'xl', 'hg', 'hd']
     }
   }
 } satisfies Meta<typeof VContainer>
@@ -39,7 +39,7 @@ export const Sizes = {
         <VContainer v-bind="args" size="tn" style="height: 4rem; background: var(--v-color-surface-mod)">tn</VContainer>
         <VContainer v-bind="args" size="xs" style="height: 4rem; background: var(--v-color-surface-mod)">xs</VContainer>
         <VContainer v-bind="args" size="sm" style="height: 4rem; background: var(--v-color-surface-mod)">sm</VContainer>
-        <VContainer v-bind="args" size="df" style="height: 4rem; background: var(--v-color-surface-mod)">df</VContainer>
+        <VContainer v-bind="args" size="bs" style="height: 4rem; background: var(--v-color-surface-mod)">bs</VContainer>
         <VContainer v-bind="args" size="md" style="height: 4rem; background: var(--v-color-surface-mod)">md</VContainer>
         <VContainer v-bind="args" size="lg" style="height: 4rem; background: var(--v-color-surface-mod)">lg</VContainer>
         <VContainer v-bind="args" size="xl" style="height: 4rem; background: var(--v-color-surface-mod)">xl</VContainer>

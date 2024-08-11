@@ -9,7 +9,7 @@
 
   withDefaults(defineProps<VContainerProps>(), {
     as: 'div',
-    size: 'df'
+    size: 'bs'
   })
 </script>
 
@@ -35,8 +35,8 @@
     --v-container-width: var(--v-container-sm);
   }
 
-  .v-container--df {
-    --v-container-width: var(--v-container-df);
+  .v-container--bs {
+    --v-container-width: var(--v-container-bs);
   }
 
   .v-container--md {
