@@ -4,6 +4,7 @@ import { themes } from '@storybook/theming'
 import '@/css/styles.css'
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
     docs: {
       theme: themes.dark
