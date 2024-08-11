@@ -16,6 +16,7 @@
     "./styles": "./dist/style.css"
   },
   "scripts": {
+    "dev": "npm run storybook",
     "build": "vue-tsc && vite build",
     "test": "vitest --run --environment jsdom",
     "eslint": "eslint . --ext .vue,.js --ignore-path .gitignore",
