@@ -15,7 +15,7 @@
       'v-text--balance': balance,
       'v-text--clamp': maxLines
     }"
-    :style="{ ...fluidFontStyles, ...clampStyles }"
+    :style="style"
   >
     <slot />
   </component>
@@ -37,20 +37,27 @@
     balance: false
   })
 
-  const fluidFontStyles = computed(() =>
-    props.minSize && props.maxSize
-      ? {
+  const style = computed(() => {
+    let style = {}
+
+    if (props.minSize && props.maxSize) {
+      style = {
+        ...style,
+        ...{
           '--min-size': `var(--v-font-size-${props.minSize}-value)`,
           '--max-size': `var(--v-font-size-${props.maxSize}-value)`,
           '--size-start': props.sizeStart,
           '--size-end': props.sizeEnd
         }
-      : {}
-  )
+      }
+    }
 
-  const clampStyles = computed(() =>
-    props.maxLines ? { '--v-text-line-clamp': props.maxLines } : {}
-  )
+    if (props.maxLines) {
+      style = { ...style, ...{ '--v-text-line-clamp': props.maxLines } }
+    }
+
+    return style
+  })
 </script>
 
 <style>

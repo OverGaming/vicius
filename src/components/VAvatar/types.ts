@@ -1,6 +1,6 @@
 import type { VImageAlt, VImageSrc } from '../VImage/types'
 
-export type VAvatarSize = 'xs' | 'sm' | 'df' | 'md' | 'lg' | 'xl'
+export type VAvatarSize = 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl'
 
 export interface VAvatarProps {
   label?: string

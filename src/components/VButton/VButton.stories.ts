@@ -18,7 +18,7 @@ const meta = {
     },
     size: {
       control: 'select',
-      options: ['xs', 'sm', 'df']
+      options: ['xs', 'sm', 'bs']
     }
   }
 } satisfies Meta<typeof VButton>
@@ -47,7 +47,7 @@ export const Sizes = {
     },
     template: `
       <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
-        <VButton v-bind="args">Button df</VButton>
+        <VButton v-bind="args">Button bs</VButton>
         <VButton v-bind="args" size="sm">Button sm</VButton>
         <VButton v-bind="args" size="xs">Button xs</VButton>
       </div>

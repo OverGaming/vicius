@@ -7,7 +7,7 @@ const meta = {
   argTypes: {
     size: {
       control: 'select',
-      options: ['xs', 'sm', 'df', 'md', 'lg', 'xl']
+      options: ['xs', 'sm', 'bs', 'md', 'lg', 'xl']
     }
   }
 } satisfies Meta<typeof VAvatar>
@@ -39,7 +39,7 @@ export const Sizes = {
         <VAvatar v-bind="args" size="xl" />
         <VAvatar v-bind="args" size="lg" />
         <VAvatar v-bind="args" size="md" />
-        <VAvatar v-bind="args" size="df" />
+        <VAvatar v-bind="args" size="bs" />
         <VAvatar v-bind="args" size="sm" />
         <VAvatar v-bind="args" size="xs" />
       </div>
@@ -48,7 +48,7 @@ export const Sizes = {
         <VAvatar v-bind="args" label="x l" size="xl" />
         <VAvatar v-bind="args" label="l g" size="lg" />
         <VAvatar v-bind="args" label="m d" size="md" />
-        <VAvatar v-bind="args" label="d f" size="df" />
+        <VAvatar v-bind="args" label="d f" size="bs" />
         <VAvatar v-bind="args" label="s m" size="sm" />
         <VAvatar v-bind="args" label="x s" size="xs" />
       </div>
@@ -57,7 +57,7 @@ export const Sizes = {
         <VAvatar v-bind="args" src="/images/avatar.webp" label="x l" size="xl" />
         <VAvatar v-bind="args" src="/images/avatar.webp" label="l g" size="lg" />
         <VAvatar v-bind="args" src="/images/avatar.webp" label="m d" size="md" />
-        <VAvatar v-bind="args" src="/images/avatar.webp" label="d f" size="df" />
+        <VAvatar v-bind="args" src="/images/avatar.webp" label="d f" size="bs" />
         <VAvatar v-bind="args" src="/images/avatar.webp" label="s m" size="sm" />
         <VAvatar v-bind="args" src="/images/avatar.webp" label="x s" size="xs" />
       </div>

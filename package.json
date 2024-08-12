@@ -16,6 +16,7 @@
     "./styles": "./dist/style.css"
   },
   "scripts": {
+    "dev": "npm run storybook",
     "build": "vue-tsc && vite build",
     "test": "vitest --run --environment jsdom",
     "eslint": "eslint . --ext .vue,.js --ignore-path .gitignore",
@@ -28,9 +29,6 @@
     "lint:fix": "npm run eslint:fix && npm run stylelint:fix && npm run prettier:fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
-  },
-  "peerDependencies": {
-    "vue": "3.4.31"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
