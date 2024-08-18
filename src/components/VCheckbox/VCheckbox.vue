@@ -51,10 +51,10 @@
     --v-checkbox-border-radius: var(--v-radius-sm);
     --v-checkbox-background-color: var(--v-color-surface-mod-alt);
     --v-checkbox-hover-border-color: var(--v-color-outline-high);
-    --v-checkbox-focus-border-color: var(--v-color-primary);
-    --v-checkbox-checked-background-color: var(--v-color-primary);
-    --v-checkbox-checked-border-color: var(--v-color-primary);
-    --v-checkbox-checked-color: var(--v-color-on-primary);
+    --v-checkbox-focus-border-color: var(--v-color-accent-primary);
+    --v-checkbox-checked-background-color: var(--v-color-accent-primary);
+    --v-checkbox-checked-border-color: var(--v-color-accent-primary);
+    --v-checkbox-checked-color: var(--v-color-text-contrast-high);
 
     display: flex;
     gap: var(--v-unit-4);

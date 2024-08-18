@@ -48,7 +48,7 @@
 
     &:where(&:hover, &:focus-visible, &:active):not(.v-menu-item--active) {
       background-color: var(--v-color-surface-mod);
-      color: var(--v-color-on-surface-high);
+      color: var(--v-color-text-high);
     }
 
     &:has(.v-menu__box:first-of-type) {

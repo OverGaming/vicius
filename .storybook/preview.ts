@@ -1,7 +1,7 @@
+import '@/css/styles.css'
 import type { Preview } from '@storybook/vue3'
 import { themes } from '@storybook/theming'
-
-import '@/css/styles.css'
+import { withTheme } from './decorators/withTheme'
 
 const preview: Preview = {
   tags: ['autodocs'],
@@ -23,6 +23,21 @@ const preview: Preview = {
         { name: 'high', value: 'var(--v-color-surface-high)' },
         { name: 'highest', value: 'var(--v-color-surface-highest)' }
       ]
+    }
+  },
+  decorators: [withTheme],
+  globalTypes: {
+    theme: {
+      name: 'Theme',
+      description: 'Global theme for components',
+      defaultValue: 'dark',
+      toolbar: {
+        icon: 'paintbrush',
+        items: [
+          { value: 'light', title: 'Light' },
+          { value: 'dark', title: 'Dark' }
+        ]
+      }
     }
   }
 }

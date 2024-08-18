@@ -1,8 +1,10 @@
+/* Themes */
+@import './themes/base.css';
+
 /* Global Variables */
 @import './variables/mediaqueries.css';
 @import './variables/base.css';
 @import './variables/units.css';
-@import './variables/colors.css';
 @import './variables/containers.css';
 @import './variables/typography.css';
 @import './variables/radii.css';

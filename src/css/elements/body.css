@@ -1,6 +1,6 @@
 body {
   background-color: var(--v-color-surface);
-  color: var(--v-color-on-surface);
+  color: var(--v-color-text);
   font-family: var(--v-font-family);
   font-size: var(--v-font-size);
   font-weight: var(--v-font-weight);
