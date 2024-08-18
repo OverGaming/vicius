@@ -39,7 +39,7 @@
     gap: var(--v-unit-3);
     background-color: var(--v-alert-background-color, var(--v-color-surface-mod));
     border: var(--v-unit-025) solid var(--v-alert-border-color, var(--v-color-outline));
-    color: var(--v-alert-color, var(--v-color-on-surface));
+    color: var(--v-alert-color, var(--v-color-text));
     border-radius: var(--v-radius-sm);
     padding: var(--v-unit-4);
   }

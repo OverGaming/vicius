@@ -6,9 +6,9 @@
   --v-input-border-color: var(--v-color-outline);
   --v-input-border-radius: var(--v-radius-sm);
   --v-input-background-color: var(--v-color-surface-mod-alt);
-  --v-input-color: var(--v-color-on-surface-high);
+  --v-input-color: var(--v-color-text-high);
   --v-input-font-size: var(--v-font-size-b2);
   --v-input-hover-border-color: var(--v-color-outline-high);
   --v-input-focus-border-color: var(--v-color-primary);
-  --v-input-placeholder-color: var(--v-color-on-surface);
+  --v-input-placeholder-color: var(--v-color-text);
 }

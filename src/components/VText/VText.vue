@@ -180,15 +180,15 @@
   }
 
   .v-text--low {
-    --v-text-color: var(--v-color-on-surface-low);
+    --v-text-color: var(--v-color-text-low);
   }
 
   .v-text--default {
-    --v-text-color: var(--v-color-on-surface);
+    --v-text-color: var(--v-color-text);
   }
 
   .v-text--high {
-    --v-text-color: var(--v-color-on-surface-high);
+    --v-text-color: var(--v-color-text-high);
   }
 
   .v-text--primary {

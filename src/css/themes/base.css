@@ -1,0 +1,253 @@
+:root {
+  color-scheme: light dark;
+
+  /* Palettes */
+  --v-neutral-h: 231;
+  --v-neutral-s: 20%;
+  --v-neutral-0: hsl(var(--v-neutral-h) var(--v-neutral-s) 0%);
+  --v-neutral-2: hsl(var(--v-neutral-h) var(--v-neutral-s) 2%);
+  --v-neutral-4: hsl(var(--v-neutral-h) var(--v-neutral-s) 4%);
+  --v-neutral-8: hsl(var(--v-neutral-h) var(--v-neutral-s) 8%);
+  --v-neutral-12: hsl(var(--v-neutral-h) var(--v-neutral-s) 12%);
+  --v-neutral-16: hsl(var(--v-neutral-h) var(--v-neutral-s) 16%);
+  --v-neutral-20: hsl(var(--v-neutral-h) var(--v-neutral-s) 20%);
+  --v-neutral-24: hsl(var(--v-neutral-h) var(--v-neutral-s) 24%);
+  --v-neutral-28: hsl(var(--v-neutral-h) var(--v-neutral-s) 28%);
+  --v-neutral-32: hsl(var(--v-neutral-h) var(--v-neutral-s) 32%);
+  --v-neutral-36: hsl(var(--v-neutral-h) var(--v-neutral-s) 36%);
+  --v-neutral-40: hsl(var(--v-neutral-h) var(--v-neutral-s) 40%);
+  --v-neutral-44: hsl(var(--v-neutral-h) var(--v-neutral-s) 44%);
+  --v-neutral-48: hsl(var(--v-neutral-h) var(--v-neutral-s) 48%);
+  --v-neutral-52: hsl(var(--v-neutral-h) var(--v-neutral-s) 52%);
+  --v-neutral-56: hsl(var(--v-neutral-h) var(--v-neutral-s) 56%);
+  --v-neutral-60: hsl(var(--v-neutral-h) var(--v-neutral-s) 60%);
+  --v-neutral-64: hsl(var(--v-neutral-h) var(--v-neutral-s) 64%);
+  --v-neutral-68: hsl(var(--v-neutral-h) var(--v-neutral-s) 68%);
+  --v-neutral-72: hsl(var(--v-neutral-h) var(--v-neutral-s) 72%);
+  --v-neutral-76: hsl(var(--v-neutral-h) var(--v-neutral-s) 76%);
+  --v-neutral-80: hsl(var(--v-neutral-h) var(--v-neutral-s) 80%);
+  --v-neutral-84: hsl(var(--v-neutral-h) var(--v-neutral-s) 84%);
+  --v-neutral-88: hsl(var(--v-neutral-h) var(--v-neutral-s) 88%);
+  --v-neutral-90: hsl(var(--v-neutral-h) var(--v-neutral-s) 90%);
+  --v-neutral-92: hsl(var(--v-neutral-h) var(--v-neutral-s) 92%);
+  --v-neutral-94: hsl(var(--v-neutral-h) var(--v-neutral-s) 94%);
+  --v-neutral-96: hsl(var(--v-neutral-h) var(--v-neutral-s) 96%);
+  --v-neutral-98: hsl(var(--v-neutral-h) var(--v-neutral-s) 98%);
+  --v-neutral-100: hsl(var(--v-neutral-h) var(--v-neutral-s) 100%);
+
+  --v-blue-h: 198;
+  --v-blue-44: hsl(var(--v-blue-h) 56% 44%);
+  --v-blue-48: hsl(var(--v-blue-h) 56% 48%);
+  --v-blue-56: hsl(var(--v-blue-h) 56% 56%);
+  --v-blue-64: hsl(var(--v-blue-h) 72% 64%);
+  --v-blue-68: hsl(var(--v-blue-h) 72% 68%);
+  --v-blue-72: hsl(var(--v-blue-h) 72% 72%);
+
+  --v-yellow-h: 36;
+  --v-yellow-44: hsl(var(--v-yellow-h) 56% 44%);
+  --v-yellow-48: hsl(var(--v-yellow-h) 56% 48%);
+  --v-yellow-56: hsl(var(--v-yellow-h) 56% 56%);
+  --v-yellow-64: hsl(var(--v-yellow-h) 72% 64%);
+  --v-yellow-68: hsl(var(--v-yellow-h) 72% 68%);
+  --v-yellow-72: hsl(var(--v-yellow-h) 72% 72%);
+
+  --v-red-h: 0;
+  --v-red-44: hsl(var(--v-red-h) 56% 44%);
+  --v-red-48: hsl(var(--v-red-h) 56% 48%);
+  --v-red-56: hsl(var(--v-red-h) 56% 56%);
+  --v-red-64: hsl(var(--v-red-h) 72% 64%);
+  --v-red-68: hsl(var(--v-red-h) 72% 68%);
+  --v-red-72: hsl(var(--v-red-h) 72% 72%);
+
+  --v-green-h: 100;
+  --v-green-44: hsl(var(--v-green-h) 52% 44%);
+  --v-green-48: hsl(var(--v-green-h) 52% 48%);
+  --v-green-56: hsl(var(--v-green-h) 52% 56%);
+  --v-green-64: hsl(var(--v-green-h) 52% 64%);
+  --v-green-68: hsl(var(--v-green-h) 52% 68%);
+  --v-green-72: hsl(var(--v-green-h) 52% 72%);
+
+  /* Light mode */
+  --v-light-fill-100: var(--v-neutral-100);
+  --v-light-fill-200: var(--v-neutral-96);
+  --v-light-fill-300: var(--v-neutral-92);
+  --v-light-fill-400: var(--v-neutral-88);
+  --v-light-fill-500: var(--v-neutral-84);
+  --v-light-fill-600: var(--v-neutral-80);
+
+  --v-light-shade-100: color-mix(in hsl, var(--v-neutral-60), transparent 96%);
+  --v-light-shade-200: color-mix(in hsl, var(--v-neutral-60), transparent 88%);
+  --v-light-shade-300: color-mix(in hsl, var(--v-neutral-60), transparent 80%);
+  --v-light-shade-400: color-mix(in hsl, var(--v-neutral-60), transparent 72%);
+  --v-light-shade-500: color-mix(in hsl, var(--v-neutral-60), transparent 64%);
+  --v-light-shade-600: color-mix(in hsl, var(--v-neutral-60), transparent 56%);
+
+  --v-light-tint-100: color-mix(in hsl, var(--v-neutral-100), transparent 84%);
+  --v-light-tint-200: color-mix(in hsl, var(--v-neutral-100), transparent 68%);
+  --v-light-tint-300: color-mix(in hsl, var(--v-neutral-100), transparent 52%);
+  --v-light-tint-400: color-mix(in hsl, var(--v-neutral-100), transparent 36%);
+  --v-light-tint-500: color-mix(in hsl, var(--v-neutral-100), transparent 20%);
+  --v-light-tint-600: color-mix(in hsl, var(--v-neutral-100), transparent 4%);
+
+  --v-light-mod-100: color-mix(in hsl, var(--v-neutral-100), transparent 80%);
+  --v-light-mod-200: color-mix(in hsl, var(--v-neutral-100), transparent 70%);
+  --v-light-mod-300: color-mix(in hsl, var(--v-neutral-100), transparent 60%);
+  --v-light-mod-400: color-mix(in hsl, var(--v-neutral-100), transparent 50%);
+  --v-light-mod-500: color-mix(in hsl, var(--v-neutral-100), transparent 40%);
+  --v-light-mod-600: color-mix(in hsl, var(--v-neutral-100), transparent 30%);
+
+  --v-light-mod-alt-100: color-mix(in hsl, var(--v-neutral-80), transparent 88%);
+  --v-light-mod-alt-200: color-mix(in hsl, var(--v-neutral-80), transparent 84%);
+  --v-light-mod-alt-300: color-mix(in hsl, var(--v-neutral-80), transparent 80%);
+  --v-light-mod-alt-400: color-mix(in hsl, var(--v-neutral-80), transparent 76%);
+  --v-light-mod-alt-500: color-mix(in hsl, var(--v-neutral-80), transparent 72%);
+  --v-light-mod-alt-600: color-mix(in hsl, var(--v-neutral-80), transparent 68%);
+
+  --v-light-text-400: color-mix(in hsl, var(--v-neutral-12), transparent 60%);
+  --v-light-text-500: color-mix(in hsl, var(--v-neutral-12), transparent 40%);
+  --v-light-text-600: color-mix(in hsl, var(--v-neutral-12), transparent 20%);
+
+  --v-light-text-contrast-400: color-mix(in hsl, var(--v-neutral-98), transparent 45%);
+  --v-light-text-contrast-500: color-mix(in hsl, var(--v-neutral-98), transparent 30%);
+  --v-light-text-contrast-600: color-mix(in hsl, var(--v-neutral-98), transparent 5%);
+
+  /* Dark mode */
+  --v-dark-fill-100: var(--v-neutral-36);
+  --v-dark-fill-200: var(--v-neutral-32);
+  --v-dark-fill-300: var(--v-neutral-28);
+  --v-dark-fill-400: var(--v-neutral-24);
+  --v-dark-fill-500: var(--v-neutral-20);
+  --v-dark-fill-600: var(--v-neutral-16);
+
+  --v-dark-shade-100: color-mix(in hsl, var(--v-neutral-0), transparent 92%);
+  --v-dark-shade-200: color-mix(in hsl, var(--v-neutral-0), transparent 88%);
+  --v-dark-shade-300: color-mix(in hsl, var(--v-neutral-0), transparent 84%);
+  --v-dark-shade-400: color-mix(in hsl, var(--v-neutral-0), transparent 80%);
+  --v-dark-shade-500: color-mix(in hsl, var(--v-neutral-0), transparent 76%);
+  --v-dark-shade-600: color-mix(in hsl, var(--v-neutral-0), transparent 72%);
+
+  --v-dark-tint-100: color-mix(in hsl, var(--v-neutral-80), transparent 92%);
+  --v-dark-tint-200: color-mix(in hsl, var(--v-neutral-80), transparent 88%);
+  --v-dark-tint-300: color-mix(in hsl, var(--v-neutral-80), transparent 84%);
+  --v-dark-tint-400: color-mix(in hsl, var(--v-neutral-80), transparent 80%);
+  --v-dark-tint-500: color-mix(in hsl, var(--v-neutral-80), transparent 76%);
+  --v-dark-tint-600: color-mix(in hsl, var(--v-neutral-80), transparent 72%);
+
+  --v-dark-mod-100: color-mix(in hsl, var(--v-neutral-60), transparent 98%);
+  --v-dark-mod-200: color-mix(in hsl, var(--v-neutral-60), transparent 94%);
+  --v-dark-mod-300: color-mix(in hsl, var(--v-neutral-60), transparent 90%);
+  --v-dark-mod-400: color-mix(in hsl, var(--v-neutral-60), transparent 86%);
+  --v-dark-mod-500: color-mix(in hsl, var(--v-neutral-60), transparent 82%);
+  --v-dark-mod-600: color-mix(in hsl, var(--v-neutral-60), transparent 78%);
+
+  --v-dark-mod-alt-100: color-mix(in hsl, var(--v-neutral-4), transparent 88%);
+  --v-dark-mod-alt-200: color-mix(in hsl, var(--v-neutral-4), transparent 84%);
+  --v-dark-mod-alt-300: color-mix(in hsl, var(--v-neutral-4), transparent 80%);
+  --v-dark-mod-alt-400: color-mix(in hsl, var(--v-neutral-4), transparent 76%);
+  --v-dark-mod-alt-500: color-mix(in hsl, var(--v-neutral-4), transparent 72%);
+  --v-dark-mod-alt-600: color-mix(in hsl, var(--v-neutral-4), transparent 68%);
+
+  --v-dark-text-400: color-mix(in hsl, var(--v-neutral-98), transparent 45%);
+  --v-dark-text-500: color-mix(in hsl, var(--v-neutral-98), transparent 30%);
+  --v-dark-text-600: color-mix(in hsl, var(--v-neutral-98), transparent 5%);
+
+  --v-dark-text-contrast-400: color-mix(in hsl, var(--v-neutral-12), transparent 60%);
+  --v-dark-text-contrast-500: color-mix(in hsl, var(--v-neutral-12), transparent 40%);
+  --v-dark-text-contrast-600: color-mix(in hsl, var(--v-neutral-12), transparent 20%);
+
+  /* Colors */
+  --v-color-surface-floating: light-dark(var(--v-light-fill-600), var(--v-dark-fill-600));
+  --v-color-surface-lowest: light-dark(var(--v-light-fill-500), var(--v-dark-fill-500));
+  --v-color-surface-low: light-dark(var(--v-light-fill-400), var(--v-dark-fill-400));
+  --v-color-surface: light-dark(var(--v-light-fill-300), var(--v-dark-fill-300));
+  --v-color-surface-high: light-dark(var(--v-light-fill-200), var(--v-dark-fill-200));
+  --v-color-surface-highest: light-dark(var(--v-light-fill-100), var(--v-dark-fill-100));
+
+  --v-color-surface-mod-lowest: light-dark(var(--v-light-mod-100), var(--v-dark-mod-100));
+  --v-color-surface-mod-low: light-dark(var(--v-light-mod-200), var(--v-dark-mod-200));
+  --v-color-surface-mod: light-dark(var(--v-light-mod-300), var(--v-dark-mod-300));
+  --v-color-surface-mod-high: light-dark(var(--v-light-mod-400), var(--v-dark-mod-400));
+  --v-color-surface-mod-highest: light-dark(var(--v-light-mod-500), var(--v-dark-mod-500));
+
+  --v-color-surface-mod-alt-lowest: light-dark(
+    var(--v-light-mod-alt-100),
+    var(--v-dark-mod-alt-100)
+  );
+  --v-color-surface-mod-alt-low: light-dark(var(--v-light-mod-alt-200), var(--v-dark-mod-alt-200));
+  --v-color-surface-mod-alt: light-dark(var(--v-light-mod-alt-300), var(--v-dark-mod-alt-300));
+  --v-color-surface-mod-alt-high: light-dark(var(--v-light-mod-alt-400), var(--v-dark-mod-alt-400));
+  --v-color-surface-mod-alt-highest: light-dark(
+    var(--v-light-mod-alt-500),
+    var(--v-dark-mod-alt-500)
+  );
+
+  --v-color-text-low: light-dark(var(--v-light-text-400), var(--v-dark-text-400));
+  --v-color-text: light-dark(var(--v-light-text-500), var(--v-dark-text-500));
+  --v-color-text-high: light-dark(var(--v-light-text-600), var(--v-dark-text-600));
+  --v-color-text-contrast-low: light-dark(
+    var(--v-light-text-contrast-400),
+    var(--v-dark-text-contrast-400)
+  );
+  --v-color-text-contrast: light-dark(
+    var(--v-light-text-contrast-500),
+    var(--v-dark-text-contrast-500)
+  );
+  --v-color-text-contrast-high: light-dark(
+    var(--v-light-text-contrast-600),
+    var(--v-dark-text-contrast-600)
+  );
+
+  --v-color-outline-lowest: light-dark(var(--v-light-shade-100), var(--v-dark-tint-100));
+  --v-color-outline-low: light-dark(var(--v-light-shade-200), var(--v-dark-tint-200));
+  --v-color-outline: light-dark(var(--v-light-shade-300), var(--v-dark-tint-300));
+  --v-color-outline-high: light-dark(var(--v-light-shade-400), var(--v-dark-tint-400));
+  --v-color-outline-highest: light-dark(var(--v-light-shade-500), var(--v-dark-tint-500));
+
+  --v-color-elevation-stroke: light-dark(var(--v-light-shade-300), var(--v-dark-shade-400));
+  --v-color-elevation-low: light-dark(var(--v-light-shade-300), var(--v-dark-shade-400));
+  --v-color-elevation: light-dark(var(--v-light-shade-400), var(--v-dark-shade-300));
+  --v-color-elevation-high: light-dark(var(--v-light-shade-500), var(--v-dark-shade-600));
+
+  --v-color-skeleton: var(--v-color-surface-mod-alt);
+  --v-color-backdrop: color-mix(in hsl, var(--v-neutral-12), transparent 5%);
+  --v-color-overlay: hsl(231 20% 16%);
+
+  --v-color-primary: light-dark(var(--v-blue-56), var(--v-blue-64));
+  --v-color-error: light-dark(var(--v-red-56), var(--v-red-72));
+  --v-color-warning: light-dark(var(--v-yellow-56), var(--v-yellow-72));
+  --v-color-info: light-dark(var(--v-blue-56), var(--v-blue-72));
+  --v-color-success: light-dark(var(--v-green-56), var(--v-green-72));
+
+  --v-color-accent-primary: light-dark(var(--v-blue-48), var(--v-blue-64));
+  --v-color-accent-primary-hover: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-primary-focus: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-primary-active: light-dark(var(--v-blue-44), var(--v-blue-68));
+
+  --v-color-accent-error: light-dark(var(--v-red-48), var(--v-red-64));
+  --v-color-accent-error-hover: light-dark(var(--v-red-44), var(--v-red-68));
+  --v-color-accent-error-focus: light-dark(var(--v-red-44), var(--v-red-68));
+  --v-color-accent-error-active: light-dark(var(--v-red-44), var(--v-red-68));
+
+  --v-color-accent-warning: light-dark(var(--v-yellow-48), var(--v-yellow-64));
+  --v-color-accent-warning-hover: light-dark(var(--v-yellow-44), var(--v-yellow-68));
+  --v-color-accent-warning-focus: light-dark(var(--v-yellow-44), var(--v-yellow-68));
+  --v-color-accent-warning-active: light-dark(var(--v-yellow-44), var(--v-yellow-68));
+
+  --v-color-accent-info: light-dark(var(--v-blue-48), var(--v-blue-64));
+  --v-color-accent-info-hover: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-info-focus: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-info-active: light-dark(var(--v-blue-44), var(--v-blue-68));
+
+  --v-color-accent-success: light-dark(var(--v-green-48), var(--v-green-64));
+  --v-color-accent-success-hover: light-dark(var(--v-green-44), var(--v-green-68));
+  --v-color-accent-success-focus: light-dark(var(--v-green-44), var(--v-green-68));
+  --v-color-accent-success-active: light-dark(var(--v-green-44), var(--v-green-68));
+}
+
+.dark:root {
+  color-scheme: dark;
+}
+
+.light:root {
+  color-scheme: light;
+}

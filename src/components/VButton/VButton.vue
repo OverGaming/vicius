@@ -53,18 +53,19 @@
 
 <style>
   :root {
-    --v-button-color: var(--v-color-on-surface);
+    --v-button-color: var(--v-color-text);
     --v-button-background-color: transparent;
     --v-button-visibility: visible;
     --v-button-size: var(--v-unit-12);
 
-    --v-button-hover-color: var(--v-color-on-surface-high);
-    --v-button-focus-color: var(--v-color-on-surface-high);
-    --v-button-active-color: var(--v-color-on-surface-high);
+    --v-button-hover-color: var(--v-color-text-high);
+    --v-button-focus-color: var(--v-color-text-high);
+    --v-button-active-color: var(--v-color-text-high);
     --v-button-hover-background-color: var(--v-color-surface-mod);
     --v-button-focus-background-color: var(--v-color-surface-mod);
     --v-button-active-background-color: var(--v-color-surface-mod);
   }
+
   .v-button {
     display: inline-grid;
     grid-auto-flow: column;
@@ -212,14 +213,14 @@
   }
 
   .v-button--cr-primary {
-    --v-button-color: var(--v-color-on-primary);
+    --v-button-color: var(--v-color-text-contrast-high);
     --v-button-background-color: var(--v-color-primary);
 
-    --v-button-hover-color: var(--v-color-on-primary);
-    --v-button-focus-color: var(--v-color-on-primary);
-    --v-button-active-color: var(--v-color-on-primary);
-    --v-button-hover-background-color: var(--v-color-primary);
-    --v-button-focus-background-color: var(--v-color-primary);
-    --v-button-active-background-color: var(--v-color-primary);
+    --v-button-hover-color: var(--v-color-text-contrast-high);
+    --v-button-focus-color: var(--v-color-text-contrast-high);
+    --v-button-active-color: var(--v-color-text-contrast-high);
+    --v-button-hover-background-color: var(--v-color-accent-primary-hover);
+    --v-button-focus-background-color: var(--v-color-accent-primary-focus);
+    --v-button-active-background-color: var(--v-color-accent-primary-active);
   }
 </style>

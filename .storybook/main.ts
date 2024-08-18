@@ -5,7 +5,6 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@chromatic-com/storybook',
     '@storybook/addon-interactions'
   ],
   framework: {
@@ -14,4 +13,5 @@ const config: StorybookConfig = {
   },
   staticDirs: ['../public']
 }
+
 export default config
