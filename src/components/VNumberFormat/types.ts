@@ -1,4 +1,7 @@
+export type VNumberFormatValue = number
+export type VNumberFormatDigits = 0 | 1
+
 export interface VNumberFormatProps {
-  value: number
-  digits?: 0 | 1
+  value: VNumberFormatValue
+  digits?: VNumberFormatDigits
 }

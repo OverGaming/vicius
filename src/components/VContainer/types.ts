@@ -1,4 +1,7 @@
+export type VContainerAs = string
+export type VContainerSize = 'xt' | 'tn' | 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl' | 'hg' | 'hd'
+
 export interface VContainerProps {
-  as?: string
-  size?: 'xt' | 'tn' | 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl' | 'hg' | 'hd'
+  as?: VContainerAs
+  size?: VContainerSize
 }

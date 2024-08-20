@@ -10,11 +10,11 @@ const meta = {
     endIcon: VIconStories.argTypes.name,
     variant: {
       control: 'select',
-      options: ['default', 'text']
+      options: ['ghost']
     },
     color: {
       control: 'select',
-      options: ['default', 'primary']
+      options: ['primary', 'error', 'success', 'warning', 'info']
     },
     size: {
       control: 'select',
@@ -46,7 +46,7 @@ export const Sizes = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
         <VButton v-bind="args">Button bs</VButton>
         <VButton v-bind="args" size="sm">Button sm</VButton>
         <VButton v-bind="args" size="xs">Button xs</VButton>
@@ -69,9 +69,13 @@ export const Colors = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
-        <VButton v-bind="args" color="default">Button default</VButton>
-        <VButton v-bind="args" color="primary">Button Primary</VButton>
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
+        <VButton v-bind="args" color="default">Default</VButton>
+        <VButton v-bind="args" color="primary">Primary</VButton>
+        <VButton v-bind="args" color="error">Error</VButton>
+        <VButton v-bind="args" color="warning">Warning</VButton>
+        <VButton v-bind="args" color="info">Info</VButton>
+        <VButton v-bind="args" color="success">Success</VButton>
       </div>
     `
   }),
@@ -91,9 +95,22 @@ export const Variants = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
-        <VButton v-bind="args" variant="default">Button default</VButton>
-        <VButton v-bind="args" variant="text">Button text</VButton>
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
+        <VButton v-bind="args">Default</VButton>
+        <VButton v-bind="args" color="primary">Primary</VButton>
+        <VButton v-bind="args" color="error">Error</VButton>
+        <VButton v-bind="args" color="warning">Warning</VButton>
+        <VButton v-bind="args" color="info">Info</VButton>
+        <VButton v-bind="args" color="success">Success</VButton>
+      </div>
+      <br>
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
+        <VButton v-bind="args" variant="ghost">Default</VButton>
+        <VButton v-bind="args" variant="ghost" color="primary">Primary</VButton>
+        <VButton v-bind="args" variant="ghost" color="error">Error</VButton>
+        <VButton v-bind="args" variant="ghost" color="warning">Warning</VButton>
+        <VButton v-bind="args" variant="ghost" color="info">Info</VButton>
+        <VButton v-bind="args" variant="ghost" color="success">Success</VButton>
       </div>
     `
   }),
@@ -113,7 +130,7 @@ export const WithIcon = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
         <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
         <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>
         <div><VButton v-bind="args">Button text</VButton></div>
@@ -134,7 +151,7 @@ export const Loading = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
         <VButton v-bind="args">Button text</VButton>
         <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
         <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>
@@ -157,7 +174,7 @@ export const Disabled = {
       return { args }
     },
     template: `
-      <div style="display: grid; grid-auto-flow: row; justify-items: start; gap: 1rem;">
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
         <VButton v-bind="args">Button text</VButton>
         <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
         <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>

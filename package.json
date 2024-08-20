@@ -8,10 +8,12 @@
   ],
   "main": "./dist/vicius.umd.cjs",
   "module": "./dist/vicius.js",
+  "types": "./dist/vicius.d.ts",
   "exports": {
     ".": {
       "import": "./dist/vicius.js",
-      "require": "./dist/vicius.umd.cjs"
+      "require": "./dist/vicius.umd.cjs",
+      "types": "./dist/vicius.d.ts"
     },
     "./styles": "./dist/style.css"
   },
@@ -47,10 +49,14 @@
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/user-event": "14.5.2",
     "@testing-library/vue": "8.1.0",
+    "@tsconfig/node20": "20.1.4",
+    "@types/jsdom": "21.1.7",
+    "@types/node": "22.4.1",
     "@vitejs/plugin-vue": "5.0.5",
     "@vue/eslint-config-prettier": "9.0.0",
     "@vue/eslint-config-typescript": "13.0.0",
     "@vue/test-utils": "2.4.6",
+    "@vue/tsconfig": "0.5.1",
     "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-config-recommended": "4.1.0",
@@ -74,6 +80,7 @@
     "stylelint-config-recommended-vue": "1.5.0",
     "typescript": "5.5.3",
     "vite": "5.3.3",
+    "vite-plugin-dts": "4.0.3",
     "vitest": "2.0.2",
     "vue": "3.4.31",
     "vue-tsc": "2.0.26"

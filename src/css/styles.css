@@ -12,9 +12,6 @@
 @import './variables/z-index.css';
 @import './variables/motion.css';
 
-/* Component Variables */
-@import '../components/VInput/variables.css';
-
 /* Generics */
 @import './generic/root.css';
 @import './generic/reset.css';

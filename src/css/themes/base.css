@@ -42,6 +42,8 @@
   --v-blue-64: hsl(var(--v-blue-h) 72% 64%);
   --v-blue-68: hsl(var(--v-blue-h) 72% 68%);
   --v-blue-72: hsl(var(--v-blue-h) 72% 72%);
+  --v-blue-opacity-44: color-mix(in hsl, var(--v-blue-44), transparent 92%);
+  --v-blue-opacity-64: color-mix(in hsl, var(--v-blue-64), transparent 92%);
 
   --v-yellow-h: 36;
   --v-yellow-44: hsl(var(--v-yellow-h) 56% 44%);
@@ -50,6 +52,8 @@
   --v-yellow-64: hsl(var(--v-yellow-h) 72% 64%);
   --v-yellow-68: hsl(var(--v-yellow-h) 72% 68%);
   --v-yellow-72: hsl(var(--v-yellow-h) 72% 72%);
+  --v-yellow-opacity-44: color-mix(in hsl, var(--v-yellow-44), transparent 92%);
+  --v-yellow-opacity-64: color-mix(in hsl, var(--v-yellow-64), transparent 92%);
 
   --v-red-h: 0;
   --v-red-44: hsl(var(--v-red-h) 56% 44%);
@@ -58,6 +62,8 @@
   --v-red-64: hsl(var(--v-red-h) 72% 64%);
   --v-red-68: hsl(var(--v-red-h) 72% 68%);
   --v-red-72: hsl(var(--v-red-h) 72% 72%);
+  --v-red-opacity-44: color-mix(in hsl, var(--v-red-44), transparent 92%);
+  --v-red-opacity-64: color-mix(in hsl, var(--v-red-64), transparent 92%);
 
   --v-green-h: 100;
   --v-green-44: hsl(var(--v-green-h) 52% 44%);
@@ -66,6 +72,8 @@
   --v-green-64: hsl(var(--v-green-h) 52% 64%);
   --v-green-68: hsl(var(--v-green-h) 52% 68%);
   --v-green-72: hsl(var(--v-green-h) 52% 72%);
+  --v-green-opacity-44: color-mix(in hsl, var(--v-green-44), transparent 92%);
+  --v-green-opacity-64: color-mix(in hsl, var(--v-green-64), transparent 92%);
 
   /* Light mode */
   --v-light-fill-100: var(--v-neutral-100);
@@ -104,7 +112,7 @@
   --v-light-mod-alt-600: color-mix(in hsl, var(--v-neutral-80), transparent 68%);
 
   --v-light-text-400: color-mix(in hsl, var(--v-neutral-12), transparent 60%);
-  --v-light-text-500: color-mix(in hsl, var(--v-neutral-12), transparent 40%);
+  --v-light-text-500: color-mix(in hsl, var(--v-neutral-12), transparent 32%);
   --v-light-text-600: color-mix(in hsl, var(--v-neutral-12), transparent 20%);
 
   --v-light-text-contrast-400: color-mix(in hsl, var(--v-neutral-98), transparent 45%);
@@ -152,7 +160,7 @@
   --v-dark-text-600: color-mix(in hsl, var(--v-neutral-98), transparent 5%);
 
   --v-dark-text-contrast-400: color-mix(in hsl, var(--v-neutral-12), transparent 60%);
-  --v-dark-text-contrast-500: color-mix(in hsl, var(--v-neutral-12), transparent 40%);
+  --v-dark-text-contrast-500: color-mix(in hsl, var(--v-neutral-12), transparent 32%);
   --v-dark-text-contrast-600: color-mix(in hsl, var(--v-neutral-12), transparent 20%);
 
   /* Colors */
@@ -210,7 +218,7 @@
 
   --v-color-skeleton: var(--v-color-surface-mod-alt);
   --v-color-backdrop: color-mix(in hsl, var(--v-neutral-12), transparent 5%);
-  --v-color-overlay: hsl(231 20% 16%);
+  --v-color-overlay: var(--v-neutral-16);
 
   --v-color-primary: light-dark(var(--v-blue-56), var(--v-blue-64));
   --v-color-error: light-dark(var(--v-red-56), var(--v-red-72));
@@ -222,32 +230,43 @@
   --v-color-accent-primary-hover: light-dark(var(--v-blue-44), var(--v-blue-68));
   --v-color-accent-primary-focus: light-dark(var(--v-blue-44), var(--v-blue-68));
   --v-color-accent-primary-active: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-primary-opacity: light-dark(var(--v-blue-opacity-44), var(--v-blue-opacity-64));
 
   --v-color-accent-error: light-dark(var(--v-red-48), var(--v-red-64));
   --v-color-accent-error-hover: light-dark(var(--v-red-44), var(--v-red-68));
   --v-color-accent-error-focus: light-dark(var(--v-red-44), var(--v-red-68));
   --v-color-accent-error-active: light-dark(var(--v-red-44), var(--v-red-68));
+  --v-color-accent-error-opacity: light-dark(var(--v-red-opacity-44), var(--v-red-opacity-64));
 
   --v-color-accent-warning: light-dark(var(--v-yellow-48), var(--v-yellow-64));
   --v-color-accent-warning-hover: light-dark(var(--v-yellow-44), var(--v-yellow-68));
   --v-color-accent-warning-focus: light-dark(var(--v-yellow-44), var(--v-yellow-68));
   --v-color-accent-warning-active: light-dark(var(--v-yellow-44), var(--v-yellow-68));
+  --v-color-accent-warning-opacity: light-dark(
+    var(--v-yellow-opacity-44),
+    var(--v-yellow-opacity-64)
+  );
 
   --v-color-accent-info: light-dark(var(--v-blue-48), var(--v-blue-64));
   --v-color-accent-info-hover: light-dark(var(--v-blue-44), var(--v-blue-68));
   --v-color-accent-info-focus: light-dark(var(--v-blue-44), var(--v-blue-68));
   --v-color-accent-info-active: light-dark(var(--v-blue-44), var(--v-blue-68));
+  --v-color-accent-info-opacity: light-dark(var(--v-blue-opacity-44), var(--v-blue-opacity-64));
 
   --v-color-accent-success: light-dark(var(--v-green-48), var(--v-green-64));
   --v-color-accent-success-hover: light-dark(var(--v-green-44), var(--v-green-68));
   --v-color-accent-success-focus: light-dark(var(--v-green-44), var(--v-green-68));
   --v-color-accent-success-active: light-dark(var(--v-green-44), var(--v-green-68));
+  --v-color-accent-success-opacity: light-dark(
+    var(--v-green-opacity-44),
+    var(--v-green-opacity-64)
+  );
 }
 
-.dark:root {
+.v-dark:root {
   color-scheme: dark;
 }
 
-.light:root {
+.v-light:root {
   color-scheme: light;
 }

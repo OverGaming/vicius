@@ -34,10 +34,12 @@ export type VIconName =
   | 'Warning'
 
 export type VIconSize = 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl'
+export type VIconTitle = string
+export type VIconAnimate = Animate
 
 export interface VIconProps {
   name: VIconName
-  title?: string
+  title?: VIconTitle
   size?: VIconSize
-  animate?: Animate
+  animate?: VIconAnimate
 }

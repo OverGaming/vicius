@@ -1,3 +1,5 @@
+export type VTimeAgoTime = string | Date | number
+
 export interface VTimeAgoProps {
-  time: string | Date | number
+  time: VTimeAgoTime
 }

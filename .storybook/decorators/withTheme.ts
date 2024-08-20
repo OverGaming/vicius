@@ -1,8 +1,8 @@
 import { watchEffect } from 'vue'
 
 const THEMES = [
-  { name: 'light', className: 'light' },
-  { name: 'dark', className: 'dark' }
+  { name: 'light', className: 'v-light' },
+  { name: 'dark', className: 'v-dark' }
 ]
 
 export const withTheme = (story, context) => {

@@ -1,9 +1,15 @@
+export type VMenuAs = string
+
 export interface VMenuProps {
-  as?: string
+  as?: VMenuAs
 }
 
+export type VMenuItemHref = string
+export type VMenuItemType = 'button' | 'submit' | 'reset'
+export type VMenuItemActive = boolean
+
 export interface VMenuItemProps {
-  href?: string
-  type?: 'button' | 'submit' | 'reset'
-  active?: boolean
+  href?: VMenuItemHref
+  type?: VMenuItemType
+  active?: VMenuItemActive
 }

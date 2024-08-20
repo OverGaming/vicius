@@ -1,13 +1,19 @@
 export type VImageSrc = string | undefined
 export type VImageAlt = string
+export type VImageLoading = 'eager' | 'lazy'
+export type VImageSrcset = string
+export type VImageSizes = string
+export type VImageAspectRatio = string
+export type VImageFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
+export type VImagePosition = string
 
 export interface VImageProps {
   src?: VImageSrc
   alt?: VImageAlt
-  loading?: 'eager' | 'lazy'
-  srcset?: string
-  sizes?: string
-  aspectRatio?: string
-  fit?: 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
-  position?: string
+  loading?: VImageLoading
+  srcset?: VImageSrcset
+  sizes?: VImageSizes
+  aspectRatio?: VImageAspectRatio
+  fit?: VImageFit
+  position?: VImagePosition
 }

@@ -1,3 +1,5 @@
+export type VAlertType = 'error' | 'warning' | 'info' | 'success'
+
 export interface VAlertProps {
-  type?: 'error' | 'warning' | 'info' | 'success'
+  type?: VAlertType
 }

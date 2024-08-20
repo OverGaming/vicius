@@ -1,13 +1,18 @@
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
+import vue from '@vitejs/plugin-vue'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   plugins: [
-    Vue({
+    vue({
       script: {
         defineModel: true
       }
+    }),
+    dts({
+      tsconfigPath: './tsconfig.build.json',
+      rollupTypes: true
     })
   ],
   build: {
