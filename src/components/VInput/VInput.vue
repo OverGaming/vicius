@@ -44,6 +44,21 @@
 </script>
 
 <style>
+  :root {
+    --v-input-size: var(--v-unit-12);
+    --v-input-height: var(--v-input-size);
+    --v-input-border-style: solid;
+    --v-input-border-width: var(--v-unit-025);
+    --v-input-border-color: var(--v-color-outline);
+    --v-input-border-radius: var(--v-radius-sm);
+    --v-input-background-color: var(--v-color-surface-mod-alt);
+    --v-input-color: var(--v-color-text-high);
+    --v-input-font-size: var(--v-font-size-b2);
+    --v-input-hover-border-color: var(--v-color-outline-high);
+    --v-input-focus-border-color: var(--v-color-primary);
+    --v-input-placeholder-color: var(--v-color-text);
+  }
+
   .v-input {
     width: 100%;
     min-height: var(--v-input-height);
@@ -58,6 +73,10 @@
     transition: border-color var(--v-duration-fast);
     padding-inline-start: var(--v-unit-4);
     padding-inline-end: var(--v-unit-4);
+
+    &.patata {
+      --v-input-height: 60px;
+    }
 
     &:hover:not(:disabled, .v-input--invalid) {
       @media (hover) {

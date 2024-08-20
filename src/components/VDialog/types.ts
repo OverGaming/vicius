@@ -1,7 +1,9 @@
 import type { Ref } from 'vue'
 
+export type VDialogShowClose = boolean
+
 export interface VDialogProps {
-  showClose?: boolean
+  showClose?: VDialogShowClose
 }
 
 export interface VDialogContext {
@@ -9,6 +11,8 @@ export interface VDialogContext {
   close: () => void
 }
 
+export type VDialogCloseStatic = boolean
+
 export interface VDialogCloseProps {
-  static?: boolean
+  static?: VDialogCloseStatic
 }

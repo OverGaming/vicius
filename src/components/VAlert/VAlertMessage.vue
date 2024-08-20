@@ -1,5 +1,5 @@
 <template>
-  <VText as="p" variant="label" size="b3" pretty>
+  <VText as="p" variant="body" size="b3" pretty>
     <slot />
   </VText>
 </template>

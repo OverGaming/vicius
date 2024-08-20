@@ -15,12 +15,10 @@
 <script setup lang="ts">
   import { useSlots } from 'vue'
   import VText from '../VText/VText.vue'
+  import type { VDividerProps } from './types'
 
-  defineProps({
-    dot: {
-      type: Boolean,
-      default: false
-    }
+  withDefaults(defineProps<VDividerProps>(), {
+    dot: false
   })
 
   const slots = useSlots()

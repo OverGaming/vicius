@@ -52,21 +52,25 @@
   }
 
   .v-alert--error {
+    --v-alert-background-color: var(--v-color-accent-error-opacity);
     --v-alert-border-color: var(--v-color-error);
     --v-alert-color: var(--v-color-error);
   }
 
   .v-alert--warning {
+    --v-alert-background-color: var(--v-color-accent-warning-opacity);
     --v-alert-border-color: var(--v-color-warning);
     --v-alert-color: var(--v-color-warning);
   }
 
   .v-alert--info {
+    --v-alert-background-color: var(--v-color-accent-info-opacity);
     --v-alert-border-color: var(--v-color-info);
     --v-alert-color: var(--v-color-info);
   }
 
   .v-alert--success {
+    --v-alert-background-color: var(--v-color-accent-success-opacity);
     --v-alert-border-color: var(--v-color-success);
     --v-alert-color: var(--v-color-success);
   }

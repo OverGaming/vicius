@@ -1,4 +1,7 @@
+export type VInitialsName = string
+export type VInitialsNum = number
+
 export interface VInitialsProps {
-  name?: string
-  num?: number
+  name?: VInitialsName
+  num?: VInitialsNum
 }

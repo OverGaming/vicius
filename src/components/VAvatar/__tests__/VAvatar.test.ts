@@ -30,6 +30,6 @@ describe('VAvatar', () => {
 
   it.each(sizes)('should apply the correct %s size class', size => {
     const wrapper = mount(VAvatar, { props: { alt, size } })
-    expect(wrapper.classes(`v-avatar--sz-${size}`)).toBeTruthy()
+    expect(wrapper.classes(`v-avatar--${size}`)).toBeTruthy()
   })
 })
