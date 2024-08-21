@@ -1,21 +1,23 @@
 <template>
-  <component
-    :is="htmlTag"
-    :href="href"
-    class="v-menu-item"
-    :class="{ 'v-menu-item--active': active }"
-    :type="htmlTag === 'button' ? type : undefined"
-  >
-    <div v-if="$slots.prepend" class="v-menu__box">
-      <slot name="prepend" />
-    </div>
-    <VText class="v-menu-item__text" variant="body" size="b3" ellipsis>
-      <slot />
-    </VText>
-    <div v-if="$slots.append" class="v-menu__box">
-      <slot name="append" />
-    </div>
-  </component>
+  <li class="v-menu-item">
+    <component
+      :is="htmlTag"
+      :href="href"
+      class="v-menu-item__element"
+      :class="{ 'v-menu-item--active': active }"
+      :type="htmlTag === 'button' ? type : undefined"
+    >
+      <div v-if="$slots.prepend" class="v-menu__box">
+        <slot name="prepend" />
+      </div>
+      <VText class="v-menu-item__text" variant="body" size="b3" ellipsis>
+        <slot />
+      </VText>
+      <div v-if="$slots.append" class="v-menu__box">
+        <slot name="append" />
+      </div>
+    </component>
+  </li>
 </template>
 
 <script setup lang="ts">
@@ -32,7 +34,7 @@
 </script>
 
 <style>
-  .v-menu-item {
+  .v-menu-item__element {
     display: grid;
     grid-auto-flow: column;
     justify-content: start;
@@ -40,6 +42,7 @@
     gap: var(--v-unit-3);
     min-height: var(--v-unit-12);
     width: 100%;
+    color: var(--v-color-text);
     padding-inline-start: var(--v-unit-4);
     padding-inline-end: var(--v-unit-4);
     border-radius: var(--v-radius-sm);
