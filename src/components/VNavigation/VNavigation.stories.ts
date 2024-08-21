@@ -1,6 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import VNavigation from './VNavigation.vue'
+import VNavigationContent from './VNavigationContent.vue'
+import VNavigationHeader from './VNavigationHeader.vue'
+import VNavigationFooter from './VNavigationFooter.vue'
 import VMenu from '../VMenu/VMenu.vue'
+import VMenuItems from '../VMenu/VMenuItems.vue'
 import VMenuItem from '../VMenu/VMenuItem.vue'
 import VMenuLabel from '../VMenu/VMenuLabel.vue'
 
@@ -15,21 +19,23 @@ type Story = StoryObj<typeof VNavigation>
 
 export const Default = {
   render: args => ({
-    components: { VNavigation, VMenu, VMenuItem, VMenuLabel },
+    components: { VNavigation, VNavigationContent, VMenu, VMenuItems, VMenuItem, VMenuLabel },
     setup() {
       return { args }
     },
     template: `
       <VNavigation v-bind="args">
-        <VMenu v-for="n in 2" :key="n">
-          <template #label>
+        <VNavigationContent>
+          <VMenu>
             <VMenuLabel>Label</VMenuLabel>
-          </template>
-          <VMenuItem active>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-        </VMenu>
+            <VMenuItems>
+              <VMenuItem active>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+            </VMenuItems>
+          </VMenu>
+        </VNavigationContent>
       </VNavigation>
     `
   })
@@ -37,24 +43,34 @@ export const Default = {
 
 export const WithHeader = {
   render: args => ({
-    components: { VNavigation, VMenu, VMenuItem, VMenuLabel },
+    components: {
+      VNavigation,
+      VNavigationContent,
+      VNavigationHeader,
+      VMenu,
+      VMenuItems,
+      VMenuItem,
+      VMenuLabel
+    },
     setup() {
       return { args }
     },
     template: `
       <VNavigation v-bind="args">
-        <template #header>
+        <VNavigationHeader>
           <div>Header</div>
-        </template> 
-        <VMenu v-for="n in 2" :key="n">
-          <template #label>
+        </VNavigationHeader> 
+        <VNavigationContent>
+          <VMenu>
             <VMenuLabel>Label</VMenuLabel>
-          </template>
-          <VMenuItem active>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-        </VMenu>
+            <VMenuItems>
+              <VMenuItem active>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+            </VMenuItems>
+          </VMenu>
+        </VNavigationContent>
       </VNavigation>
     `
   })
@@ -62,24 +78,34 @@ export const WithHeader = {
 
 export const WithFooter = {
   render: args => ({
-    components: { VNavigation, VMenu, VMenuItem, VMenuLabel },
+    components: {
+      VNavigation,
+      VNavigationContent,
+      VNavigationFooter,
+      VMenu,
+      VMenuItems,
+      VMenuItem,
+      VMenuLabel
+    },
     setup() {
       return { args }
     },
     template: `
       <VNavigation v-bind="args">
-        <VMenu v-for="n in 2" :key="n">
-          <template #label>
+        <VNavigationContent>
+          <VMenu>
             <VMenuLabel>Label</VMenuLabel>
-          </template>
-          <VMenuItem active>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-        </VMenu>
-        <template #footer>
+            <VMenuItems>
+              <VMenuItem active>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+            </VMenuItems>
+          </VMenu>
+        </VNavigationContent>
+        <VNavigationFooter>
           <div>Footer</div>
-        </template> 
+        </VNavigationFooter> 
       </VNavigation>
     `
   })
@@ -87,27 +113,45 @@ export const WithFooter = {
 
 export const WithHeaderAndFooter = {
   render: args => ({
-    components: { VNavigation, VMenu, VMenuItem, VMenuLabel },
+    components: {
+      VNavigation,
+      VNavigationContent,
+      VNavigationHeader,
+      VNavigationFooter,
+      VMenu,
+      VMenuItems,
+      VMenuItem,
+      VMenuLabel
+    },
     setup() {
       return { args }
     },
     template: `
       <VNavigation v-bind="args">
-        <template #header>
+        <VNavigationHeader>
           <div>Header</div>
-        </template> 
-        <VMenu v-for="n in 2" :key="n">
-          <template #label>
+        </VNavigationHeader> 
+        <VNavigationContent>
+          <VMenu>
             <VMenuLabel>Label</VMenuLabel>
-          </template>
-          <VMenuItem active>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-          <VMenuItem>Item</VMenuItem>
-        </VMenu>
-        <template #footer>
+            <VMenuItems>
+              <VMenuItem active>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+            </VMenuItems>
+            <VMenuLabel>Label</VMenuLabel>
+            <VMenuItems>
+              <VMenuItem active>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+              <VMenuItem>Item</VMenuItem>
+            </VMenuItems>
+          </VMenu>
+        </VNavigationContent>
+        <VNavigationFooter>
           <div>Footer</div>
-        </template> 
+        </VNavigationFooter> 
       </VNavigation>
     `
   })
