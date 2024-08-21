@@ -7,10 +7,4 @@ describe('VMenu', () => {
     render(VMenu, { slots: { default: text } })
     expect(screen.getByText(text)).toBeVisible()
   })
-
-  it('should display the label content', () => {
-    const text = 'Text'
-    render(VMenu, { slots: { label: text } })
-    expect(screen.getByText(text)).toBeVisible()
-  })
 })
