@@ -6,6 +6,8 @@ export type VImageSizes = string
 export type VImageAspectRatio = string
 export type VImageFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
 export type VImagePosition = string
+export type VImageRounded = boolean
+export type VImageCircle = boolean
 
 export interface VImageProps {
   src?: VImageSrc
@@ -16,4 +18,6 @@ export interface VImageProps {
   aspectRatio?: VImageAspectRatio
   fit?: VImageFit
   position?: VImagePosition
+  rounded?: VImageRounded
+  circle?: VImageCircle
 }

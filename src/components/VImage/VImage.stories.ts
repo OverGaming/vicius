@@ -31,6 +31,12 @@ const meta = {
     },
     position: {
       control: 'text'
+    },
+    rounded: {
+      control: 'boolean'
+    },
+    circle: {
+      control: 'boolean'
     }
   }
 } satisfies Meta<typeof VImage>

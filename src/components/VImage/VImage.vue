@@ -4,7 +4,9 @@
     class="v-image"
     :class="{
       'v-image--aspect-ratio': aspectRatio !== 'auto',
-      'v-image--error': hasError && slots.error
+      'v-image--error': hasError && slots.error,
+      'v-image--rounded': rounded,
+      'v-image--circle': circle
     }"
   >
     <slot v-if="hasError && slots.fallback" name="fallback" />
@@ -32,7 +34,9 @@
     alt: '',
     loading: 'eager',
     fit: 'cover',
-    position: 'center'
+    position: 'center',
+    rounded: false,
+    circle: false
   })
 
   const slots = useSlots()
@@ -67,5 +71,13 @@
       height: 100%;
       width: 100%;
     }
+  }
+
+  .v-image--rounded {
+    --v-image-border-radius: var(--v-radius-sm);
+  }
+
+  .v-image--circle {
+    --v-image-border-radius: var(--v-radius-pill);
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="v-avatar" :class="{ [`v-avatar--${size}`]: size }">
-    <VImage class="v-avatar__img" :src="src" :alt="alt" aspect-ratio="1">
+    <VImage class="v-avatar__img" :src="src" :alt="alt" aspect-ratio="1" circle>
       <template #error>
         <VInitials v-if="label" :name="label" />
         <VIcon v-else name="Person" :size="size" />
@@ -32,10 +32,6 @@
     width: var(--v-avatar-size, var(--v-unit-11));
     height: var(--v-avatar-size, var(--v-unit-11));
     border-radius: var(--v-radius-pill);
-  }
-
-  .v-avatar__img {
-    --v-image-border-radius: var(--v-radius-pill);
   }
 
   .v-avatar--xs {
