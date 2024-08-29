@@ -5,7 +5,12 @@ import { ref } from 'vue'
 
 const meta = {
   title: 'Feedback/VDialog',
-  component: VDialog
+  component: VDialog,
+  argTypes: {
+    showClose: {
+      control: 'boolean'
+    }
+  }
 } satisfies Meta<typeof VDialog>
 
 export default meta
@@ -33,28 +38,6 @@ export const Default = {
   })
 } satisfies Story
 
-export const WithClose = {
-  render: args => ({
-    components: { VDialog, VDialogClose },
-    setup() {
-      const isOpen = ref(true)
-
-      const open = () => {
-        isOpen.value = true
-      }
-
-      return { args, isOpen, open }
-    },
-    template: `
-      <button @click="open">Open</button>
-      <VDialog v-model="isOpen" v-bind="args">
-        <VDialogClose />
-        Slot content
-      </VDialog>
-    `
-  })
-} satisfies Story
-
 export const WithStaticClose = {
   render: args => ({
     components: { VDialog, VDialogClose },
@@ -70,7 +53,7 @@ export const WithStaticClose = {
     template: `
       <button @click="open">Open</button>
       <VDialog v-model="isOpen" v-bind="args">
-        <VDialogClose static />
+        <template #close><VDialogClose static /></template>
         Slot content
       </VDialog>
     `

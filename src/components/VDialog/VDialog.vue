@@ -9,6 +9,9 @@
       @click="clickOutsideHandler"
     >
       <div class="v-dialog__inner">
+        <slot v-if="showClose" name="close">
+          <VDialogClose />
+        </slot>
         <slot v-bind="{ isOpen, close }" />
       </div>
     </dialog>
@@ -19,6 +22,7 @@
   import { watchEffect, ref, useAttrs, provide } from 'vue'
   import type { VDialogProps } from './types'
   import { VDialogKey } from './keys'
+  import VDialogClose from './VDialogClose.vue'
 
   defineOptions({
     inheritAttrs: false
