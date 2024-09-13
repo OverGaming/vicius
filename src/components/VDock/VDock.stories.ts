@@ -33,3 +33,35 @@ export const Default = {
     `
   })
 } satisfies Story
+
+export const WithHeaderAndFooter = {
+  render: args => ({
+    components: { VDock, VDockItem, VButton },
+    setup() {
+      return { args }
+    },
+    template: `
+      <VDock>
+        <template #header>
+          <VDockItem>
+            <VButton v-bind="args" start-icon="Mail"/>
+          </VDockItem>
+        </template>
+        <VDockItem>
+          <VButton v-bind="args" start-icon="Mail"/>
+        </VDockItem>
+        <VDockItem>
+          <VButton v-bind="args" start-icon="Mail"/>
+        </VDockItem>
+        <VDockItem>
+          <VButton v-bind="args" start-icon="Mail"/>
+        </VDockItem>
+        <template #footer>
+          <VDockItem>
+            <VButton v-bind="args" start-icon="Mail"/>
+          </VDockItem>
+        </template>
+      </VDock>
+    `
+  })
+} satisfies Story

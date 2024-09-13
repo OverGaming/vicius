@@ -5,9 +5,9 @@
 </template>
 
 <script setup lang="ts">
-  import type { VNavigationProps } from './types'
+  import type { VNavigationContentProps } from './types'
 
-  withDefaults(defineProps<VNavigationProps>(), {
+  withDefaults(defineProps<VNavigationContentProps>(), {
     as: 'nav'
   })
 </script>

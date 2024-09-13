@@ -1,10 +1,16 @@
 <template>
-  <div class="v-navigation">
+  <component :is="as" class="v-navigation">
     <slot />
-  </div>
+  </component>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+  import type { VNavigationProps } from './types'
+
+  withDefaults(defineProps<VNavigationProps>(), {
+    as: 'div'
+  })
+</script>
 
 <style>
   .v-navigation {
