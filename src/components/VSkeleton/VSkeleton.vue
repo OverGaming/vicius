@@ -1,5 +1,5 @@
 <template>
-  <div class="v-skeleton v-animate-pulse">
+  <div class="v-skeleton v-animate-pulse" role="status" aria-live="polite" aria-busy="true">
     <div class="v-skeleton__ratio">
       <slot />
     </div>
