@@ -38,6 +38,9 @@
     border-radius: var(--v-radius-sm);
     transition: var(--v-duration-default) var(--v-easing-standard);
     transition-property: background-color, color;
+    font-weight: var(--v-font-weight-normal);
+    font-size: var(--v-font-size-b3);
+    line-height: var(--v-line-height);
 
     &:where(&:hover, &:focus-visible, &:active):not(.v-menu-item--active) {
       background-color: var(--v-color-surface-mod);

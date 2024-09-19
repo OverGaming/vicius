@@ -3,7 +3,6 @@ import VMenu from './VMenu.vue'
 import VMenuItems from './VMenuItems.vue'
 import VMenuItem from './VMenuItem.vue'
 import VMenuLabel from './VMenuLabel.vue'
-import VMenuText from './VMenuText.vue'
 import VIcon from '../VIcon/VIcon.vue'
 
 const meta = {
@@ -17,7 +16,7 @@ type Story = StoryObj<typeof VMenu>
 
 export const Default = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VMenuText },
+    components: { VMenu, VMenuItems, VMenuItem },
     setup() {
       return { args }
     },
@@ -25,7 +24,7 @@ export const Default = {
       <VMenu v-bind="args">
         <VMenuItems>
           <VMenuItem v-for="n in 3" :key="n">
-            <VMenuText>Item {{n}}</VMenuText>
+            Item {{n}}
           </VMenuItem>
         </VMenuItems>
       </VMenu>
@@ -35,7 +34,7 @@ export const Default = {
 
 export const WithActive = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VMenuText },
+    components: { VMenu, VMenuItems, VMenuItem },
     setup() {
       return { args }
     },
@@ -43,7 +42,7 @@ export const WithActive = {
       <VMenu v-bind="args">
         <VMenuItems>
           <VMenuItem v-for="n in 3" :key="n" :active="n === 1">
-            <VMenuText>Item {{n}}</VMenuText>
+            Item {{n}}
           </VMenuItem>
         </VMenuItems>
       </VMenu>
@@ -53,7 +52,7 @@ export const WithActive = {
 
 export const WithIcons = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VIcon, VMenuText },
+    components: { VMenu, VMenuItems, VMenuItem, VIcon },
     setup() {
       return { args }
     },
@@ -62,15 +61,15 @@ export const WithIcons = {
         <VMenuItems>
           <VMenuItem>
             <VIcon name="Mail" />
-            <VMenuText>Item</VMenuText>
+            <span>Item</span>
           </VMenuItem>
           <VMenuItem>
-            <VMenuText>Item</VMenuText>
+            <span>Item</span>
             <VIcon name="Mail" />
           </VMenuItem>
           <VMenuItem>
             <VIcon name="Mail" />
-            <VMenuText>Item</VMenuText>
+            <span>Item</span>
             <VIcon name="Mail" />
           </VMenuItem>
         </VMenuItems>
@@ -81,7 +80,7 @@ export const WithIcons = {
 
 export const WithLabel = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VMenuLabel, VMenuText, VIcon },
+    components: { VMenu, VMenuItems, VMenuItem, VMenuLabel, VIcon },
     setup() {
       return { args }
     },
@@ -90,7 +89,7 @@ export const WithLabel = {
         <VMenuLabel>Label</VMenuLabel>
         <VMenuItems>
           <VMenuItem v-for="n in 3" :key="n" :active="n === 1">
-            <VMenuText>Item {{n}}</VMenuText>
+            Item {{n}}
           </VMenuItem>
         </VMenuItems>
       </VMenu>
