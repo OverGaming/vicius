@@ -3,6 +3,7 @@ import VMenu from './VMenu.vue'
 import VMenuItems from './VMenuItems.vue'
 import VMenuItem from './VMenuItem.vue'
 import VMenuLabel from './VMenuLabel.vue'
+import VMenuText from './VMenuText.vue'
 import VIcon from '../VIcon/VIcon.vue'
 
 const meta = {
@@ -16,16 +17,16 @@ type Story = StoryObj<typeof VMenu>
 
 export const Default = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem },
+    components: { VMenu, VMenuItems, VMenuItem, VMenuText },
     setup() {
       return { args }
     },
     template: `
       <VMenu v-bind="args">
         <VMenuItems>
-          <VMenuItem>Item 1</VMenuItem>
-          <VMenuItem>Item 2</VMenuItem>
-          <VMenuItem>Item 3</VMenuItem>
+          <VMenuItem v-for="n in 3" :key="n">
+            <VMenuText>Item {{n}}</VMenuText>
+          </VMenuItem>
         </VMenuItems>
       </VMenu>
     `
@@ -34,36 +35,15 @@ export const Default = {
 
 export const WithActive = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem },
+    components: { VMenu, VMenuItems, VMenuItem, VMenuText },
     setup() {
       return { args }
     },
     template: `
       <VMenu v-bind="args">
         <VMenuItems>
-          <VMenuItem active>Item 1</VMenuItem>
-          <VMenuItem>Item 2</VMenuItem>
-          <VMenuItem>Item 3</VMenuItem>
-        </VMenuItems>
-      </VMenu>
-    `
-  })
-} satisfies Story
-
-export const WithPrepend = {
-  render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VIcon },
-    setup() {
-      return { args }
-    },
-    template: `
-      <VMenu v-bind="args">
-        <VMenuItems>
-          <VMenuItem v-for="n in 3" :key="n">
-            <template #prepend>
-              <VIcon name="Mail" />
-            </template>
-            Item
+          <VMenuItem v-for="n in 3" :key="n" :active="n === 1">
+            <VMenuText>Item {{n}}</VMenuText>
           </VMenuItem>
         </VMenuItems>
       </VMenu>
@@ -71,44 +51,27 @@ export const WithPrepend = {
   })
 } satisfies Story
 
-export const WithAppend = {
+export const WithIcons = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VIcon },
+    components: { VMenu, VMenuItems, VMenuItem, VIcon, VMenuText },
     setup() {
       return { args }
     },
     template: `
       <VMenu v-bind="args">
         <VMenuItems>
-          <VMenuItem v-for="n in 3" :key="n">
-            Item
-            <template #append>
-              <VIcon name="Mail" />
-            </template>
+          <VMenuItem>
+            <VIcon name="Mail" />
+            <VMenuText>Item</VMenuText>
           </VMenuItem>
-        </VMenuItems>
-      </VMenu>
-    `
-  })
-} satisfies Story
-
-export const WithPrependAndAppend = {
-  render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VIcon },
-    setup() {
-      return { args }
-    },
-    template: `
-      <VMenu v-bind="args">
-        <VMenuItems>
-          <VMenuItem v-for="n in 3" :key="n">
-            <template #prepend>
-              <VIcon name="Mail" />
-            </template>
-            Item
-            <template #append>
-              <VIcon name="Mail" />
-            </template>
+          <VMenuItem>
+            <VMenuText>Item</VMenuText>
+            <VIcon name="Mail" />
+          </VMenuItem>
+          <VMenuItem>
+            <VIcon name="Mail" />
+            <VMenuText>Item</VMenuText>
+            <VIcon name="Mail" />
           </VMenuItem>
         </VMenuItems>
       </VMenu>
@@ -118,7 +81,7 @@ export const WithPrependAndAppend = {
 
 export const WithLabel = {
   render: args => ({
-    components: { VMenu, VMenuItems, VMenuItem, VMenuLabel, VIcon },
+    components: { VMenu, VMenuItems, VMenuItem, VMenuLabel, VMenuText, VIcon },
     setup() {
       return { args }
     },
@@ -126,11 +89,8 @@ export const WithLabel = {
       <VMenu v-bind="args">
         <VMenuLabel>Label</VMenuLabel>
         <VMenuItems>
-          <VMenuItem active>
-            Item
-          </VMenuItem>
-          <VMenuItem v-for="n in 3" :key="n">
-            Item
+          <VMenuItem v-for="n in 3" :key="n" :active="n === 1">
+            <VMenuText>Item {{n}}</VMenuText>
           </VMenuItem>
         </VMenuItems>
       </VMenu>

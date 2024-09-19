@@ -7,21 +7,12 @@
       :class="{ 'v-menu-item--active': active }"
       :type="htmlTag === 'button' ? type : undefined"
     >
-      <div v-if="$slots.prepend" class="v-menu__box">
-        <slot name="prepend" />
-      </div>
-      <VText class="v-menu-item__text" variant="body" size="b3" ellipsis>
-        <slot />
-      </VText>
-      <div v-if="$slots.append" class="v-menu__box">
-        <slot name="append" />
-      </div>
+      <slot />
     </component>
   </li>
 </template>
 
 <script setup lang="ts">
-  import VText from '../VText/VText.vue'
   import { computed } from 'vue'
   import type { VMenuItemProps } from './types'
 
@@ -43,8 +34,7 @@
     min-height: var(--v-unit-12);
     width: 100%;
     color: var(--v-color-text);
-    padding-inline-start: var(--v-unit-4);
-    padding-inline-end: var(--v-unit-4);
+    padding: var(--v-unit-2) var(--v-unit-4);
     border-radius: var(--v-radius-sm);
     transition: var(--v-duration-default) var(--v-easing-standard);
     transition-property: background-color, color;
@@ -70,9 +60,5 @@
   .v-menu-item--active {
     background-color: var(--v-color-surface-mod);
     color: var(--v-color-primary);
-  }
-
-  .v-menu__box {
-    display: flex;
   }
 </style>
