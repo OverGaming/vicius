@@ -20,12 +20,6 @@ describe('VButton', () => {
     expect(screen.getByText(text)).toBeVisible()
   })
 
-  it('should display icons', async () => {
-    render(VButton, { props: { startIcon: 'Bell', endIcon: 'Compass' } })
-    expect(await screen.findByRole('img', { description: 'Bell' })).toBeVisible()
-    expect(await screen.findByRole('img', { description: 'Compass' })).toBeVisible()
-  })
-
   it('should display loading icon', async () => {
     render(VButton, { slots: { default: 'Text' }, props: { loading: true } })
     expect(await screen.findByRole('img', { description: 'Loader' })).toBeVisible()

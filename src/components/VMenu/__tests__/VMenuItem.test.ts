@@ -19,16 +19,4 @@ describe('VMenuItem', () => {
     render(VMenuItem, { slots: { default: text } })
     expect(screen.getByText(text)).toBeVisible()
   })
-
-  it('should display the prepend content', () => {
-    const text = 'Text'
-    render(VMenuItem, { slots: { prepend: text } })
-    expect(screen.getByText(text)).toBeVisible()
-  })
-
-  it('should display the append content', () => {
-    const text = 'Text'
-    render(VMenuItem, { slots: { append: text } })
-    expect(screen.getByText(text)).toBeVisible()
-  })
 })

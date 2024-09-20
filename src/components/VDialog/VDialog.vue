@@ -102,9 +102,8 @@
   }
 
   .v-dialog__inner {
-    display: flex;
-    flex-direction: column;
     overflow-y: auto;
+    overscroll-behavior: contain;
     flex-grow: 1;
     scroll-timeline: --v-dialog-scroll-timeline block;
     min-height: calc((var(--v-dialog-padding) * 2) + var(--v-unit-8));

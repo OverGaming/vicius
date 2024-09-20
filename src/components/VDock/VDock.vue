@@ -20,9 +20,11 @@
 </script>
 
 <style>
-  .v-dock {
+  :root {
     --v-dock-gap: var(--v-unit-3);
+  }
 
+  .v-dock {
     display: inline-grid;
   }
 

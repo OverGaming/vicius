@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/vue3'
 import VDock from './VDock.vue'
 import VDockItem from './VDockItem.vue'
 import VButton from '../VButton/VButton.vue'
+import VIcon from '../VIcon/VIcon.vue'
 
 const meta = {
   title: 'Menu/VDock',
@@ -14,20 +15,16 @@ type Story = StoryObj<typeof VDock>
 
 export const Default = {
   render: args => ({
-    components: { VDock, VDockItem, VButton },
+    components: { VDock, VDockItem, VButton, VIcon },
     setup() {
       return { args }
     },
     template: `
       <VDock>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
-        </VDockItem>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
-        </VDockItem>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
+        <VDockItem v-for="n in 3" :key="n">
+          <VButton v-bind="args">
+            <VIcon name="Mail" />
+          </VButton>
         </VDockItem>
       </VDock>
     `
@@ -36,7 +33,7 @@ export const Default = {
 
 export const WithHeaderAndFooter = {
   render: args => ({
-    components: { VDock, VDockItem, VButton },
+    components: { VDock, VDockItem, VButton, VIcon },
     setup() {
       return { args }
     },
@@ -44,21 +41,21 @@ export const WithHeaderAndFooter = {
       <VDock>
         <template #header>
           <VDockItem>
-            <VButton v-bind="args" start-icon="Mail"/>
+            <VButton v-bind="args">
+            <VIcon name="Mail" />
+          </VButton>
           </VDockItem>
         </template>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
-        </VDockItem>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
-        </VDockItem>
-        <VDockItem>
-          <VButton v-bind="args" start-icon="Mail"/>
+        <VDockItem v-for="n in 3" :key="n">
+          <VButton v-bind="args">
+            <VIcon name="Mail" />
+          </VButton>
         </VDockItem>
         <template #footer>
           <VDockItem>
-            <VButton v-bind="args" start-icon="Mail"/>
+            <VButton v-bind="args">
+            <VIcon name="Mail" />
+          </VButton>
           </VDockItem>
         </template>
       </VDock>

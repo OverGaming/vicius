@@ -1,7 +1,7 @@
 <template>
   <div class="v-alert" role="alert" :class="{ [`v-alert--${type}`]: type }">
     <slot name="icon">
-      <VIcon :name="icon" />
+      <VIcon :name="icon" size="bs" />
     </slot>
     <div class="v-alert__box">
       <slot />

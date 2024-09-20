@@ -18,22 +18,14 @@
     <span v-if="loading" class="v-button__icon v-button__icon--loader">
       <VIcon name="Loader" :size="size" animate="spin" />
     </span>
-    <span v-if="startIcon" class="v-button__icon v-button__icon--start">
-      <VIcon :name="startIcon" :size="size" />
-    </span>
-    <VText v-if="$slots.default" variant="label" size="b3" class="v-button__text">
-      <slot />
-    </VText>
-    <span v-if="endIcon" class="v-button__icon v-button__icon--end">
-      <VIcon :name="endIcon" :size="size" />
-    </span>
+
+    <slot />
   </component>
 </template>
 
 <script setup lang="ts">
   import { computed } from 'vue'
   import VIcon from '../VIcon/VIcon.vue'
-  import VText from '../VText/VText.vue'
   import type { VButtonProps } from './types'
 
   const props = withDefaults(defineProps<VButtonProps>(), {
@@ -71,6 +63,8 @@
     --v-button-ghost-active-color: var(--v-color-text-high);
     --v-button-ghost-active-background-color: var(--v-color-surface-mod);
 
+    --v-icon-size: var(--v-unit-6);
+
     display: inline-grid;
     grid-auto-flow: column;
     gap: var(--v-unit-3);
@@ -86,6 +80,9 @@
     transition: var(--v-duration-default) var(--v-easing-standard);
     transition-property: background-color, color;
     position: relative;
+    font-weight: var(--v-font-weight-medium);
+    font-size: var(--v-font-size-b3);
+    line-height: var(--v-line-height);
 
     &:not(:disabled, .v-button--loading) {
       &:hover {
@@ -117,29 +114,31 @@
   }
 
   .v-button--gap {
-    &:has(.v-button__text) {
+    padding-inline-start: var(--v-unit-4);
+    padding-inline-end: var(--v-unit-4);
+
+    &:has(.v-icon:first-child) {
+      padding-inline-start: var(--v-unit-4);
+      padding-inline-end: var(--v-unit-6);
+    }
+
+    &:has(.v-icon:last-child) {
+      padding-inline-start: var(--v-unit-6);
+      padding-inline-end: var(--v-unit-4);
+    }
+
+    &:not(:has(.v-icon:only-child)):has(.v-icon:first-child):has(.v-icon:last-child) {
       padding-inline-start: var(--v-unit-4);
       padding-inline-end: var(--v-unit-4);
+    }
 
-      &:has(.v-button__icon--start) {
-        padding-inline-start: var(--v-unit-4);
-        padding-inline-end: var(--v-unit-6);
-      }
-
-      &:has(.v-button__icon--end) {
-        padding-inline-start: var(--v-unit-6);
-        padding-inline-end: var(--v-unit-4);
-      }
-
-      &:has(.v-button__icon--start):has(.v-button__icon--end) {
-        padding-inline-start: var(--v-unit-4);
-        padding-inline-end: var(--v-unit-4);
-      }
+    &:has(.v-icon:only-child) {
+      padding: 0;
     }
   }
 
   .v-button__icon--loader {
-    visibility: visible;
+    color: var(--v-button-color);
     position: absolute;
     inset-block-start: 50%;
     inset-inline-start: 50%;
@@ -154,8 +153,7 @@
   }
 
   .v-button--loading {
-    --v-button-visibility: hidden;
-
+    color: transparent;
     cursor: progress;
   }
 
@@ -171,10 +169,12 @@
 
   .v-button--sm {
     --v-button-size: var(--v-unit-10);
+    --v-icon-size: var(--v-unit-5);
   }
 
   .v-button--xs {
     --v-button-size: var(--v-unit-8);
+    --v-icon-size: var(--v-unit-4);
   }
 
   .v-button--ghost {

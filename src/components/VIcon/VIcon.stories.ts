@@ -52,6 +52,9 @@ const meta = {
       control: 'select',
       options: ['spin', 'pulse']
     }
+  },
+  args: {
+    size: 'bs'
   }
 } satisfies Meta<typeof VIcon>
 

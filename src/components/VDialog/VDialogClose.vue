@@ -1,6 +1,8 @@
 <template>
   <div class="v-dialog-close" :class="{ 'v-dialog-close--static': static }">
-    <VButton start-icon="Close" size="xs" @click="close" />
+    <VButton size="xs" @click="close">
+      <VIcon name="Close" />
+    </VButton>
   </div>
 </template>
 
@@ -9,6 +11,7 @@
   import VButton from '../VButton/VButton.vue'
   import { VDialogKey } from './keys'
   import type { VDialogCloseProps } from './types'
+  import VIcon from '../VIcon/VIcon.vue'
 
   withDefaults(defineProps<VDialogCloseProps>(), {
     static: false
@@ -28,11 +31,13 @@
       inset-block-start: var(--v-dialog-padding);
       inset-inline-end: var(--v-dialog-padding);
       z-index: 2;
+
+      @media (--v-bp-sm-down) {
+        box-shadow: var(--v-elevation);
+      }
     }
 
     @media (--v-bp-sm-down) {
-      box-shadow: var(--v-elevation);
-
       & > * {
         border-radius: var(--v-dialog-border-radius);
       }

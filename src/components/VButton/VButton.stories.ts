@@ -1,13 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import VButton from './VButton.vue'
-import VIconStories from '../VIcon/VIcon.stories'
+import VIcon from '../VIcon/VIcon.vue'
 
 const meta = {
   title: 'Button/VButton',
   component: VButton,
   argTypes: {
-    startIcon: VIconStories.argTypes.name,
-    endIcon: VIconStories.argTypes.name,
     variant: {
       control: 'select',
       options: ['ghost']
@@ -41,7 +39,7 @@ export const Default = {
 
 export const Sizes = {
   render: args => ({
-    components: { VButton },
+    components: { VButton, VIcon },
     setup() {
       return { args }
     },
@@ -50,6 +48,21 @@ export const Sizes = {
         <VButton v-bind="args">Button bs</VButton>
         <VButton v-bind="args" size="sm">Button sm</VButton>
         <VButton v-bind="args" size="xs">Button xs</VButton>
+      </div>
+      <br>
+      <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
+        <VButton v-bind="args">
+          <VIcon name="Mail" />
+          <span>Button bs</span>
+        </VButton>
+        <VButton v-bind="args" size="sm">
+          <VIcon name="Mail" />
+          <span>Button sm</span>
+        </VButton>
+        <VButton v-bind="args" size="xs">
+          <VIcon name="Mail" />
+          <span>Button xs</span>
+        </VButton>
       </div>
     `
   }),
@@ -125,67 +138,94 @@ export const Variants = {
 
 export const WithIcon = {
   render: args => ({
-    components: { VButton },
+    components: { VButton, VIcon },
     setup() {
       return { args }
     },
     template: `
       <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
-        <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args">Button text</VButton></div>
-        <div><VButton v-bind="args" :end-icon="undefined"/></div>
+        <VButton v-bind="args">
+          <VIcon name="Mail" />
+          <span>Button text</span>
+        </VButton>
+        <VButton v-bind="args">
+          <span>Button text</span>
+          <VIcon name="Mail" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" />
+          <span>Button text</span>
+          <VIcon name="Mail" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" />
+        </VButton>
       </div>
     `
-  }),
-  args: {
-    startIcon: 'Mail',
-    endIcon: 'Mail'
-  }
+  })
 } satisfies Story
 
 export const Loading = {
   render: args => ({
-    components: { VButton },
+    components: { VButton, VIcon },
     setup() {
       return { args }
     },
     template: `
       <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
         <VButton v-bind="args">Button text</VButton>
-        <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args">Button text</VButton></div>
-        <div><VButton v-bind="args" :end-icon="undefined"/></div>
+        <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+          <span>Button text</span>
+        </VButton>
+        <VButton v-bind="args">
+          <span>Button text</span>
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+          <span>Button text</span>
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
       </div>
     `
   }),
   args: {
-    loading: true,
-    startIcon: 'Mail',
-    endIcon: 'Mail'
+    loading: true
   }
 } satisfies Story
 
 export const Disabled = {
   render: args => ({
-    components: { VButton },
+    components: { VButton, VIcon },
     setup() {
       return { args }
     },
     template: `
       <div style="display: flex; flex-wrap: wrap; align-items: start; gap: 1rem;">
-        <VButton v-bind="args">Button text</VButton>
-        <div><VButton v-bind="args" :end-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args" :start-icon="undefined">Button text</VButton></div>
-        <div><VButton v-bind="args">Button text</VButton></div>
-        <div><VButton v-bind="args" :end-icon="undefined"/></div>
+       <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+          <span>Button text</span>
+        </VButton>
+        <VButton v-bind="args">
+          <span>Button text</span>
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+          <span>Button text</span>
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
+        <VButton v-bind="args">
+          <VIcon name="Mail" :size="args.size" />
+        </VButton>
       </div>
     `
   }),
   args: {
-    startIcon: 'Mail',
-    endIcon: 'Mail',
     disabled: true
   }
 } satisfies Story

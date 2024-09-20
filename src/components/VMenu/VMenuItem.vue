@@ -26,6 +26,8 @@
 
 <style>
   .v-menu-item__element {
+    --v-icon-size: var(--v-unit-6);
+
     display: grid;
     grid-auto-flow: column;
     justify-content: start;

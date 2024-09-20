@@ -21,9 +21,7 @@
   import { computed, defineAsyncComponent } from 'vue'
   import type { VIconProps } from './types'
 
-  const props = withDefaults(defineProps<VIconProps>(), {
-    size: 'bs'
-  })
+  const props = defineProps<VIconProps>()
 
   const id = uuid()
   const component = computed(() => {
