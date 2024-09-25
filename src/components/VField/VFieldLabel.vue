@@ -10,3 +10,9 @@
 
   const { id } = useField()
 </script>
+
+<style>
+  .v-field-label {
+    padding-inline: var(--v-unit-05);
+  }
+</style>

@@ -28,14 +28,14 @@ export const Default = {
           <VFieldLabel>Label</VFieldLabel>
         </template>
  
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
   
         <VInput placeholder="Placeholder" />
 
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
 
         <template #message>
@@ -59,14 +59,14 @@ export const WithInvalidInput = {
           <VFieldLabel>Label</VFieldLabel>
         </template>
 
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
 
         <VInput placeholder="Placeholder" invalid />
 
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
 
         <template #message>
@@ -90,14 +90,14 @@ export const WithDisabledInput = {
           <VFieldLabel>Label</VFieldLabel>
         </template>
 
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
 
         <VInput placeholder="Placeholder" disabled />
 
-        <VFieldAddon name="Mail">
-          <VIcon name="Mail" />
+        <VFieldAddon>
+          <VIcon name="Mail" size="bs" />
         </VFieldAddon>
 
         <template #message>

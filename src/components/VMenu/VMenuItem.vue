@@ -6,6 +6,7 @@
       class="v-menu-item__element"
       :class="{ 'v-menu-item--active': active }"
       :type="htmlTag === 'button' ? type : undefined"
+      :disabled="htmlTag === 'button' ? disabled : undefined"
     >
       <slot />
     </component>

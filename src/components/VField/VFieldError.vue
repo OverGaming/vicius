@@ -1,6 +1,6 @@
 <template>
-  <VText v-if="isInvalid" variant="body" size="b3" color="error" class="v-field-error">
-    <VIcon name="Error" class="v-field-error__icon" />
+  <VText v-if="isInvalid" variant="body" size="b4" color="error" class="v-field-error">
+    <VIcon name="Error" size="sm" class="v-field-error__icon" />
     <span :id="messageId" class="v-field-error__text"><slot /></span>
   </VText>
 </template>
