@@ -1,6 +1,6 @@
 {
   "name": "@overgaming/vicius",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "private": false,
   "type": "module",
   "files": [
@@ -84,8 +84,5 @@
     "vitest": "2.0.5",
     "vue": "3.4.38",
     "vue-tsc": "2.0.29"
-  },
-  "dependencies": {
-    "@vueuse/core": "11.1.0"
   }
 }
