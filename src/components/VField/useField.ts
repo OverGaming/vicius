@@ -1,15 +1,24 @@
-import { computed, inject, ref } from 'vue'
+import { inject, ref, toValue, watchEffect } from 'vue'
 import { VFieldContextKey } from './keys'
 import { uuid } from '@/utils'
+import type { useFieldOptions } from './types'
 
-export const useField = () => {
-  return inject(VFieldContextKey, {
+export const useField = ({ id, isInvalid, hasMessage }: useFieldOptions = {}) => {
+  const context = inject(VFieldContextKey, {
     id: ref(uuid()),
     messageId: uuid(),
-    isField: false,
     isInvalid: ref(false),
-    isDisabled: ref(false),
-    hasMessage: computed(() => false),
+    hasMessage: ref(false),
     updateField: () => {}
   })
+
+  watchEffect(() => {
+    context.updateField({
+      id: toValue(id),
+      isInvalid: toValue(isInvalid),
+      hasMessage: toValue(hasMessage)
+    })
+  })
+
+  return context
 }

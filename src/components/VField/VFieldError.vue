@@ -10,7 +10,7 @@
   import VText from '../VText/VText.vue'
   import { useField } from './useField'
 
-  const { messageId, isInvalid } = useField()
+  const { messageId, isInvalid } = useField({ hasMessage: true })
 </script>
 
 <style>

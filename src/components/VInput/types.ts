@@ -4,6 +4,7 @@ export type VInputRequired = boolean
 export type VInputDisabled = boolean
 export type VInputPlaceholder = string
 export type VInputInvalid = boolean
+export type VInputSize = 'xs' | 'sm'
 
 export interface VInputProps {
   id?: VInputId
@@ -12,4 +13,5 @@ export interface VInputProps {
   disabled?: VInputDisabled
   placeholder?: VInputPlaceholder
   invalid?: VInputInvalid
+  size?: VInputSize
 }

@@ -1,12 +1,11 @@
 <template>
   <input
-    :id="inputId"
+    :id="id"
     v-model="value"
     class="v-input"
     :class="{
-      'v-input--border': !isField,
-      'v-input--background-color': !isField,
-      'v-input--invalid': invalid
+      'v-input--invalid': invalid,
+      [`v-input--${size}`]: size
     }"
     :type="type"
     :required="required"
@@ -21,7 +20,7 @@
 <script setup lang="ts">
   import type { VInputProps } from './types'
   import { useField } from '../VField/useField'
-  import { watchEffect } from 'vue'
+  import { computed } from 'vue'
 
   const value = defineModel<string | number>()
 
@@ -32,21 +31,16 @@
     invalid: false
   })
 
-  const { id: inputId, isField, hasMessage, messageId, updateField } = useField()
-
-  watchEffect(() => {
-    updateField({
-      id: props.id,
-      invalid: props.invalid,
-      disabled: props.disabled
-    })
+  const { id, hasMessage, messageId } = useField({
+    id: computed(() => props.id),
+    isInvalid: computed(() => props.invalid)
   })
 </script>
 
 <style>
   :root {
-    --v-input-size: var(--v-unit-12);
-    --v-input-height: var(--v-input-size);
+    --v-input-height: var(--v-unit-12);
+    --v-input-gap: var(--v-unit-4);
     --v-input-border-style: solid;
     --v-input-border-width: var(--v-unit-025);
     --v-input-border-color: var(--v-color-outline);
@@ -62,21 +56,19 @@
   .v-input {
     width: 100%;
     min-height: var(--v-input-height);
-    border: 0;
     border-radius: var(--v-input-border-radius);
     appearance: none;
-    background-color: transparent;
     color: var(--v-input-color);
     font-family: inherit;
     font-size: var(--v-input-font-size);
     outline: none;
     transition: border-color var(--v-duration-fast);
-    padding-inline-start: var(--v-unit-4);
-    padding-inline-end: var(--v-unit-4);
-
-    &.patata {
-      --v-input-height: 60px;
-    }
+    padding-inline-start: var(--v-input-gap);
+    padding-inline-end: var(--v-input-gap);
+    border: var(--v-input-border-width) var(--v-input-border-style) var(--v-input-border-color);
+    background-color: var(--v-input-background-color);
+    position: relative;
+    z-index: 1;
 
     &:hover:not(:disabled, .v-input--invalid) {
       @media (hover) {
@@ -108,11 +100,15 @@
     --v-input-border-color: var(--v-color-error);
   }
 
-  .v-input--border {
-    border: var(--v-input-border-width) var(--v-input-border-style) var(--v-input-border-color);
+  .v-input--sm {
+    --v-input-height: var(--v-unit-10);
+    --v-input-font-size: var(--v-font-size-b3);
+    --v-input-gap: var(--v-unit-3);
   }
 
-  .v-input--background-color {
-    background-color: var(--v-input-background-color);
+  .v-input--xs {
+    --v-input-height: var(--v-unit-8);
+    --v-input-font-size: var(--v-font-size-b4);
+    --v-input-gap: var(--v-unit-2);
   }
 </style>
