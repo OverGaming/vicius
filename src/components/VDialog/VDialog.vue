@@ -89,7 +89,6 @@
     }
 
     @media (--v-bp-sm) {
-      border: var(--v-unit-025) solid var(--v-color-outline-low);
       max-width: calc(100dvw - (var(--v-dialog-padding) * 2));
       max-height: calc(100dvh - (var(--v-dialog-padding) * 2));
       width: min(var(--v-dialog-width), 100%);

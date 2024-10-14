@@ -8,6 +8,7 @@ export type VIconName =
   | 'ChevronBottom'
   | 'ChevronLeft'
   | 'ChevronTop'
+  | 'ChevronRight'
   | 'Close'
   | 'Comments'
   | 'Compass'

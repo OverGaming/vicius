@@ -10,6 +10,7 @@ const iconNames: VIconName[] = [
   'ChevronBottom',
   'ChevronLeft',
   'ChevronTop',
+  'ChevronRight',
   'Close',
   'Comments',
   'Compass',
