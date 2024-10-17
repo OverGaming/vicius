@@ -8,12 +8,11 @@
   ],
   "main": "./dist/vicius.umd.cjs",
   "module": "./dist/vicius.js",
-  "types": "./dist/vicius.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/vicius.d.ts",
       "import": "./dist/vicius.js",
-      "require": "./dist/vicius.umd.cjs",
-      "types": "./dist/vicius.d.ts"
+      "require": "./dist/vicius.umd.cjs"
     },
     "./styles": "./dist/style.css"
   },

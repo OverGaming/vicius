@@ -9,7 +9,7 @@ export type VIconName =
   | 'ChevronLeft'
   | 'ChevronTop'
   | 'ChevronRight'
-  | 'Close'
+  | 'Comment'
   | 'Comments'
   | 'Compass'
   | 'Discord'
@@ -19,27 +19,27 @@ export type VIconName =
   | 'GamepadCross'
   | 'Google'
   | 'House'
-  | 'IconErrorLoad'
   | 'Info'
   | 'Loader'
   | 'Logout'
   | 'Mail'
   | 'Menu'
   | 'OverGaming'
+  | 'Pencil'
   | 'Person'
   | 'Radio'
   | 'Search'
   | 'Settings'
-  | 'SyncAlt'
   | 'Twitch'
   | 'Warning'
+  | 'Close'
 
 export type VIconSize = 'xs' | 'sm' | 'bs' | 'md' | 'lg' | 'xl'
 export type VIconTitle = string
 export type VIconAnimate = Animate
 
 export interface VIconProps {
-  name: VIconName
+  name?: VIconName
   title?: VIconTitle
   size?: VIconSize
   animate?: VIconAnimate

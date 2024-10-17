@@ -1,8 +1,3 @@
 <template>
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M8.293 18.707a1 1 0 0 1 0-1.414L13.586 12 8.293 6.707a1 1 0 0 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414 0Z"
-    fill="currentColor"
-  />
+  <path d="m9 18 6-6-6-6" />
 </template>

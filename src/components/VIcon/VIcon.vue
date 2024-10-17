@@ -1,18 +1,23 @@
 <template>
   <svg
+    v-if="name"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
-    class="v-icon"
-    :class="{
-      [`v-icon--${size}`]: size,
-      [`v-animate-${animate}`]: animate
-    }"
+    :class="classes"
     :aria-describedby="id"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
     role="img"
   >
     <title :id="id">{{ title || name }}</title>
     <component :is="component" />
   </svg>
+  <div v-else :class="classes">
+    <slot />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -20,6 +25,7 @@
   import { uuid } from '@/utils'
   import { computed, defineAsyncComponent } from 'vue'
   import type { VIconProps } from './types'
+  import Error from './Icons/Error.vue'
 
   const props = defineProps<VIconProps>()
 
@@ -27,26 +33,39 @@
   const component = computed(() => {
     const icon = props.name
     return defineAsyncComponent({
-      loader: () => import(`./Icons/${icon}.vue`).catch(() => VIconSkeleton),
+      loader: () => import(`./Icons/${icon}.vue`).catch(() => Error),
       loadingComponent: VIconSkeleton,
-      errorComponent: VIconSkeleton,
+      errorComponent: Error,
       delay: 0,
       suspensible: false
     })
   })
+
+  const classes = computed(() => {
+    return {
+      'v-icon': true,
+      [`v-icon--${props.size}`]: !!props.size,
+      [`v-animate-${props.animate}`]: !!props.animate
+    }
+  })
 </script>
 
 <style>
-  .v-icon {
+  .v-icon,
+  .v-icon svg {
     height: 1em;
     width: 1em;
     line-height: 1em;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     font-size: var(--v-icon-size, 1em);
     color: var(--v-icon-color, currentColor);
+  }
+
+  .v-icon {
+    display: inline-block;
+
+    svg {
+      display: block;
+    }
   }
 
   .v-icon--xs {
